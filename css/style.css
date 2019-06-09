@@ -144,6 +144,93 @@ p {
 .force-UTF-8 {
   content: "¡"; }
 
+
+.btn-green{
+    padding: 10px 35px;
+    text-align: center;
+    text-decoration: none;
+    background: #01c853;
+    color: #fff;
+    border: 1.2px solid #01c853;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-green:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    -webkit-transform: skewX(-45deg) translateX(0);
+            transform: skewX(-45deg) translateX(0);
+    transition: none;
+  }
+.btn-green:hover{
+    background-color: #01c853;
+    color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.btn-green:hover:before {
+    -webkit-transform: skewX(-45deg) translateX(20em);
+            transform: skewX(-45deg) translateX(20em);
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-blue{
+    padding: 10px 35px;
+    text-align: center;
+    text-decoration: none;
+    background: #2879ff;
+    color: #fff;
+    border: 1.2px solid #2879ff;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-blue:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    -webkit-transform: skewX(-45deg) translateX(0);
+            transform: skewX(-45deg) translateX(0);
+    transition: none;
+  }
+.btn-blue:hover{
+    background-color: #2879ff;
+    color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.btn-blue:hover:before {
+    -webkit-transform: skewX(-45deg) translateX(20em);
+            transform: skewX(-45deg) translateX(20em);
+    transition: all 0.5s ease-in-out;
+}
+
 /****************************/
 /** Main **/
 /****************************/
