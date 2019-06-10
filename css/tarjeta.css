@@ -10,45 +10,11 @@
 .blog-detail .carousel-fade .carousel-indicators .active, .project-detail .carousel-fade .carousel-indicators .active {
   background-color: #0ec174; }
 
-.bg-tkapital{
-    padding: 10px 35px;
-    text-align: center;
-    text-decoration: none;
+.bg-tarjeta{
     background: #0ec174;
-    color: #fff;
     border: 1.2px solid #0ec174;
-    font-size: 16px;
-    display: inline-block;
-    border-radius: 5px;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    overflow: hidden;
-    font-weight: bold;
-    cursor: pointer;
 }
 
-.bg-tkapital:before {
-    content: "";
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 3em;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -4.5em;
-    -webkit-transform: skewX(-45deg) translateX(0);
-            transform: skewX(-45deg) translateX(0);
-    transition: none;
-  }
-.bg-tkapital:hover{
+.bg-tarjeta:hover{
     background-color: #0ec174;
-    color: #fff;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-.bg-tkapital:hover:before {
-    -webkit-transform: skewX(-45deg) translateX(20em);
-            transform: skewX(-45deg) translateX(20em);
-    transition: all 0.5s ease-in-out;
 }

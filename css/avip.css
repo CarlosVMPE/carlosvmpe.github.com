@@ -10,7 +10,7 @@
 .blog-detail .carousel-fade .carousel-indicators .active, .project-detail .carousel-fade .carousel-indicators .active {
   background-color: #693cdd; }
 
-.bg-tkapital{
+.bg-avip{
     padding: 10px 35px;
     text-align: center;
     text-decoration: none;
@@ -27,7 +27,7 @@
     cursor: pointer;
 }
 
-.bg-tkapital:before {
+.bg-avip:before {
     content: "";
     background-color: rgba(255, 255, 255, 0.5);
     height: 100%;
@@ -40,14 +40,14 @@
             transform: skewX(-45deg) translateX(0);
     transition: none;
   }
-.bg-tkapital:hover{
+.bg-avip:hover{
     background-color: #693cdd;
     color: #fff;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
 
-.bg-tkapital:hover:before {
+.bg-avip:hover:before {
     -webkit-transform: skewX(-45deg) translateX(20em);
             transform: skewX(-45deg) translateX(20em);
     transition: all 0.5s ease-in-out;
