@@ -193,6 +193,7 @@ p {
 .btn-green{
     background: #01c853;
     border: 1.2px solid #01c853;
+    margin-right: 15px;
 }
 
 .btn-green:hover{
@@ -207,6 +208,7 @@ p {
 .btn-blue:hover{
     background-color: #2879ff;
 }
+
 
 /****************************/
 /** Main **/
@@ -857,6 +859,7 @@ p {
   position: relative; }
 
 blockquote {
+  font-family: "Montserrat", sans-serif;
   background: transparent none repeat scroll 0 0;
   border: medium none;
   color: #444;
@@ -879,26 +882,80 @@ blockquote {
 .ref-desgn {
   font-size: 14px; }
 
-.preloader-it {
-  background: #fff;
-  position: fixed;
-  z-index: 110;
-  height: 100%;
-  width: 100%;
-  overflow: hidden !important; }
-  .preloader-it .mdl-spinner {
-    bottom: 0;
-    height: 40px;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 40px; }
+body{
+  overflow: hidden;
+}
 
-.main-wrapper {
+.cont-loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    transition: opacity 1s ease-in;
+}
+
+/* Main */
+.main, .main-wrapper {
   background: #eee;
-  position: relative; }
+  position: relative;
+  opacity: 0;
+  /* display: none; */
+  transition: opacity 1s ease-in;
+}
+
+/* Loading */
+
+.loader{
+    position: fixed;
+    height: 50px;
+    transform-origin: bottom center;
+    animation: rotate 3s linear infinite;
+}
+
+.circle{
+    display: inline-block;
+    background-color: #01c853;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: grow 1.5s linear infinite;
+    margin: -10px;
+}
+
+.circle:nth-child(2){
+    background-color: #2879ff;
+    animation-delay: 0.75s;
+}
+
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow{
+    50%{
+        transform: scale(1);
+    }
+}
+
+/* Close NavLeft */
+.closeLeftSidebar{
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 5px;
+  color: #fff;
+  transition: .4s all;
+  cursor: pointer;
+}
+
+.closeLeftSidebar:hover{
+  color: #01c853;
+}
+
   .main-wrapper.box-layout {
     max-width: 1300px;
     margin-left: auto;
@@ -1424,7 +1481,7 @@ blockquote {
 .skills-sec .progress-cat {
   padding-bottom: 11px;
   display: block;
-  font-size: 14px; }
+  font-size: 15px; }
 .skills-sec .progress-bar-graph .bar-wrap {
   position: relative;
   float: left;
@@ -2017,7 +2074,7 @@ blockquote {
 @media (min-width: 992px) {
   .container {
     width: 970px; } }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .mt-sm-120 {
     margin-top: 120px !important; }
 
@@ -2100,6 +2157,10 @@ blockquote {
 @media (max-width: 414px) {
   h1 {
     font-size: 27px; } }
+@media (max-width: 430px) {
+  .btn-green{
+    margin: 0;
+  } }
 @media (max-width: 358px) {
   #download_cv.mdl-button {
     margin-bottom: 20px;

@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kapital Taxi</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="hencework" />
+    <meta name="theme-color" content="#1d1d1d">
+    <meta name="description" content="Portafolio Personal Carlos Vilchez Malasquez" />
+    <meta name="keywords" content="Carlos Vilchez Malasquez, material design, resume, responsive template, cv, multipurpose, portfolio, html5 template, bootstrap, html5, creative,
+            		 landing page, sass, clean, design, modern, angular js" />
+    <meta name="author" content="Carlos" />
 
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="/img/c.png">
@@ -27,8 +29,18 @@
 </head>
 
 <body id="body" class="project-detail" data-ng-app="contactApp">
+
+    <!-- Loader -->
+    <div class="cont-loader">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!-- /Loader -->
+
     <!--Main Wrapper-->
-    <div class="main-wrapper">
+    <div class="main main-wrapper">
 
         <!--Bg Image-->
         <div class="bg-struct bg-img"></div>
@@ -43,27 +55,27 @@
                     <a href="index.html"><span class="mdl-layout-title">carlos</span></a>
                     <div class="mdl-layout-spacer"></div>
                     <ul class="nav mdl-navigation mdl-layout--large-screen-only">
-                        <li><a class="mdl-navigation__link" data-scroll href="index.html#body">sobre mi</a></li>
+                        <li><a class="mdl-navigation__link" href="index.html#body">sobre mi</a></li>
                         <li>
-                            <a class="mdl-navigation__link" data-scroll href="index.html#skills_sec">habilidades</a>
+                            <a class="mdl-navigation__link" href="index.html#skills_sec">habilidades</a>
                         </li>
-                        <li><a class="mdl-navigation__link" data-scroll href="index.html#portfolio_sec">portafolio</a>
+                        <li><a class="mdl-navigation__link" href="index.html#portfolio_sec">portafolio</a>
                         </li>
-                        <li><a class="mdl-navigation__link" data-scroll href="index.html#experience_sec">experiencia</a>
+                        <li><a class="mdl-navigation__link" href="index.html#experience_sec">experiencia</a>
                         </li>
-                        <li><a class="mdl-navigation__link" data-scroll href="index.html#education_sec">educación</a>
+                        <li><a class="mdl-navigation__link" href="index.html#education_sec">educación</a>
                         </li>
                         <!-- <li><span id="blog_drp" class="mdl-navigation__link">blog</span>
-											<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-												data-mdl-for="blog_drp">
-												<li class="mdl-menu__item"><a href="blog-list.html">Blog List</a></li>
-												<li class="mdl-menu__item"><a href="image-blog-post.html">Image Blog Post</a></li>
-												<li class="mdl-menu__item"><a href="gallery-blog-post.html">Gallery Blog Post</a></li>
-												<li class="mdl-menu__item"><a href="youtube-blog-post.html">Youtube Blog Post</a></li>
-												<li class="mdl-menu__item"><a href="vimeo-blog-post.html">Vimeo Blog Post</a></li>
-												<li class="mdl-menu__item"><a href="audio-blog-post.html">Audio Blog Post</a></li>
-											</ul>
-										</li> -->
+            											<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+            												data-mdl-for="blog_drp">
+            												<li class="mdl-menu__item"><a href="blog-list.html">Blog List</a></li>
+            												<li class="mdl-menu__item"><a href="image-blog-post.html">Image Blog Post</a></li>
+            												<li class="mdl-menu__item"><a href="gallery-blog-post.html">Gallery Blog Post</a></li>
+            												<li class="mdl-menu__item"><a href="youtube-blog-post.html">Youtube Blog Post</a></li>
+            												<li class="mdl-menu__item"><a href="vimeo-blog-post.html">Vimeo Blog Post</a></li>
+            												<li class="mdl-menu__item"><a href="audio-blog-post.html">Audio Blog Post</a></li>
+            											</ul>
+            										</li> -->
                         <li><a class="mdl-navigation__link" data-scroll href="index.html#references_sec">referencias</a>
                         </li>
                         <li><a class="mdl-navigation__link" data-scroll href="index.html#contact_sec">Contacto</a></li>
@@ -90,6 +102,9 @@
 
             <!--Left Sidebar-->
             <div class="mdl-layout__drawer">
+                <div class="closeLeftSidebar">
+                    <i class="material-icons">close</i>
+                </div>
                 <div class="nicescroll-bar">
                     <div class="drawer-profile-wrap">
                         <div class="candidate-img-drawer mt-25 mb-20"></div>
@@ -133,68 +148,46 @@
                     <div class="mdl-scroll-spy-2">
                         <ul class="mdl-navigation">
                             <li>
-                                <a class="mdl-navigation__link border-top-sep" data-scroll href="#body">
+                                <a class="mdl-navigation__link border-top-sep" href="index.html#body">
                                     <i class="zmdi zmdi-border-color pr-15"></i>
                                     <span class="font-capitalize">sobre mi</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="mdl-navigation__link border-top-sep" data-scroll href="#skills_sec">
+                                <a class="mdl-navigation__link border-top-sep" href="index.html#skills_sec">
                                     <i class="zmdi zmdi-cutlery pr-15"></i>
                                     <span class="font-capitalize">habilidades</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="mdl-navigation__link border-top-sep" data-scroll href="#portfolio_sec">
+                                <a class="mdl-navigation__link border-top-sep" href="index.html#portfolio_sec">
                                     <i class="zmdi zmdi-case pr-15"></i>
                                     <span class="font-capitalize">portafolio</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="mdl-navigation__link border-top-sep" data-scroll href="#experience_sec">
+                                <a class="mdl-navigation__link border-top-sep" href="index.html#experience_sec">
                                     <i class="zmdi zmdi-shield-check pr-15"></i>
                                     <span class="font-capitalize">experiencia</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="mdl-navigation__link border-top-sep" data-scroll href="#education_sec">
+                                <a class="mdl-navigation__link border-top-sep" href="index.html#education_sec">
                                     <i class="zmdi zmdi-library pr-15"></i>
                                     <span class="font-capitalize">educación</span>
                                 </a>
                             </li>
 
-                            <!-- <li>
-											<a class="mdl-navigation__link border-top-sep" href="javascript:void(0);"
-												data-toggle="collapse" data-target="#blog_dr">
-												<i class="zmdi zmdi-tag-more pr-15"></i>
-												<span class="font-capitalize">blog</span>
-											</a>
-											<ul id="blog_dr" class="collapse collapse-level-1">
-												<li><a class="mdl-navigation__link border-top-sep" href="blog-list.html">Blog
-														List</a></li>
-												<li><a class="mdl-navigation__link border-top-sep" href="image-blog-post.html">Image
-														Blog Post</a></li>
-												<li><a class="mdl-navigation__link border-top-sep"
-														href="gallery-blog-post.html">Gallery Blog Post</a></li>
-												<li><a class="mdl-navigation__link border-top-sep"
-														href="youtube-blog-post.html">Youtube Blog Post</a></li>
-												<li><a class="mdl-navigation__link border-top-sep" href="vimeo-blog-post.html">Vimeo
-														Blog Post</a></li>
-												<li><a class="mdl-navigation__link border-top-sep" href="audio-blog-post.html">Audio
-														Blog Post</a></li>
-											</ul>
-										</li> -->
-
                             <li>
-                                <a class="mdl-navigation__link border-top-sep" data-scroll href="#references_sec">
+                                <a class="mdl-navigation__link border-top-sep" href="index.html#references_sec">
                                     <i class="zmdi zmdi-bookmark pr-15"></i>
                                     <span class="font-capitalize">referencias</span>
                                 </a>
                             </li>
 
                             <li>
-                                <a class="mdl-navigation__link border-top-sep border-bottom-sep" data-scroll
-                                    href="#contact_sec">
+                                <a class="mdl-navigation__link border-top-sep border-bottom-sep"
+                                    href="index.html#contact_sec">
                                     <i class="zmdi zmdi-email pr-15"></i>
                                     <span class="font-capitalize">Contacto</span>
                                 </a>
@@ -349,6 +342,7 @@
     <script src="js/froogaloop2.min.js"></script>
     <script src="js/jquery.slimscroll.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/portfolio.js"></script>
 </body>
 
 </html>

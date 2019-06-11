@@ -271,6 +271,8 @@ if ($('.portfolio-wrap').length > 0) {
         });
     };
     /*On Resize Portfolio Function*/
+} else {
+    var onResizePort = function () { };
 }
 /***** MasonryPortfolio function End *****/
 

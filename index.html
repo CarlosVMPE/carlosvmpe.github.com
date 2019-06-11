@@ -3,11 +3,11 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Carlos' Portfolio</title>
 	<meta name="theme-color" content="#1d1d1d">
 	<meta name="description" content="Portafolio Personal Carlos Vilchez Malasquez" />
-	<meta name="keywords" content="material design, resume, responsive template, cv, multipurpose, portfolio, html5 template, bootstrap, html5, creative,
+	<meta name="keywords" content="Carlos Vilchez Malasquez, material design, resume, responsive template, cv, multipurpose, portfolio, html5 template, bootstrap, html5, creative,
 		 landing page, sass, clean, design, modern, angular js" />
 	<meta name="author" content="Carlos" />
 
@@ -29,8 +29,17 @@
 
 <body id="body" data-ng-app="contactApp">
 
+	<!-- Loader -->
+	<div class="cont-loader">
+		<div class="loader">
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+	</div>
+	<!-- /Loader -->
+
 	<!--Main Wrapper-->
-	<div class="main-wrapper">
+	<div class="main main-wrapper">
 
 		<!--Bg Image-->
 		<div class="bg-struct bg-img"></div>
@@ -85,6 +94,9 @@
 
 			<!--Left Sidebar-->
 			<div class="mdl-layout__drawer">
+				<div class="closeLeftSidebar">
+					<i class="material-icons">close</i>
+				</div>
 				<div class="nicescroll-bar">
 					<div class="drawer-profile-wrap">
 						<div class="candidate-img-drawer mt-25 mb-20"></div>
@@ -260,6 +272,13 @@
 												<h5 class="mt-20 font-grey">
 													Ingeniero de Software / Desarrollador Front End
 												</h5>
+												<p class="mt-20">Soy una persona responsable, creativo, orientado al
+													logro de
+													resultados, evolución constante personal y profesional.
+													Soy muy curioso me gusta explorar e investigar nuevas alternativas
+													de soluciones,
+													tengo capacidad de liderazgo y facilidad para trabajar en equipo.
+												</p>
 												<div class="mt-30">
 													<a id="download_cv" class="btn-animated btn-green"
 														href="CV_Carlos_Vilchez_Malasquez.pdf" target="_blank">Descargar
@@ -1112,7 +1131,9 @@
 	</div>
 	<!--/Main Wrapper-->
 
+
 	<!-- Scripts -->
+
 	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -1128,6 +1149,7 @@
 	<script src="js/jquery.slimscroll.js"></script>
 	<script src="js/init.js"></script>
 	<script src="js/portfolio.js"></script>
+
 </body>
 
 </html>

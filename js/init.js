@@ -13,13 +13,66 @@
  ** ***************************************/
 
 "use strict";
-/*****Load function start*****/
+
 $(window).load(function () {
 	$(".preloader-it").delay(500).fadeOut("slow");
 	if (window.location.href.indexOf("index.html#") > -1)
 		$("html, body").animate({ scrollTop: $(window.location.hash).offset().top - 50 }, 800);
 });
+
+/*****Load function start*****/
+const loader = document.querySelector('.loader');
+const main = document.querySelector('.main');
+const contloader = document.querySelector('.cont-loader');
+const body = document.getElementById('body');
+
+function init() {
+	setTimeout(() => {
+		loader.style.opacity = 0;
+		loader.style.display = 'none';
+		contloader.style.display = 'none';
+
+		main.style.display = 'block';
+		body.style.overflow = 'inherit';
+
+		setTimeout(() => {
+			main.style.opacity = 1;
+		}, 50);
+
+	}, 1800);
+}
+
+init();
+hideNavs();
 /*****Load function* end*****/
+
+/*****Hide Nav start*****/
+function hideNavs() {
+	const navs = document.querySelectorAll('.mdl-layout__drawer a');
+	const leftNav = document.querySelector('.mdl-layout__drawer');
+	const obfuscator = document.querySelector('.mdl-layout__obfuscator');
+	for (let i = 0; i < navs.length; i++) {
+		navs[i].addEventListener("click", function () {
+			leftNav.setAttribute('aria-hidden', true);
+			leftNav.classList.remove('is-visible');
+
+		});
+	}
+
+	const closenav = document.querySelector('.closeLeftSidebar');
+	closenav.addEventListener('click', function () {
+		leftNav.setAttribute('aria-hidden', true);
+		leftNav.classList.remove('is-visible');
+	});
+
+}
+/*****Hide Nav* end*****/
+
+/* NAV */
+
+
+/* NAV */
+
 
 /***** Set height-width function start *****/
 var setHeightWidth = function () {
@@ -31,6 +84,7 @@ var setHeightWidth = function () {
 
 /***** Matresume function start *****/
 var matResume = function () {
+
 	/*SmoothScroll*/
 	smoothScroll.init({
 		speed: 800,
