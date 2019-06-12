@@ -47,8 +47,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a
 html, body {
   height: inherit;
   width: inherit;
-  min-height: inherit;
-  scroll-behavior: smooth;}
+  min-height: inherit;}
 
 strong {
   font-weight: bold; }
@@ -62,6 +61,29 @@ body {
   line-height: 1.5;
   overflow-y: auto;
   overflow-x: hidden; }
+
+/* Scroll Color */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 /* Mozilla based browsers */
 ::-moz-selection {
@@ -1641,11 +1663,11 @@ body{
 
 .portfolio-sec .bottom-links {
   display: block;
-  padding: 11px 30px;
+  padding: 10px 15px;
   text-align: right;
   font-size: 22px; }
-  .portfolio-sec .bottom-links a:first-child {
-    padding-right: 30px; }
+  .portfolio-sec .bottom-links a {
+    padding: 0 5px; }
 .portfolio-sec .light-img-wrap {
   position: relative;
   overflow: hidden; }

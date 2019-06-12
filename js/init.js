@@ -17,7 +17,7 @@
 $(window).load(function () {
 	$(".preloader-it").delay(500).fadeOut("slow");
 	if (window.location.href.indexOf("index.html#") > -1)
-		$("html, body").animate({ scrollTop: $(window.location.hash).offset().top - 50 }, 800);
+		$("html, body").animate({ scrollTop: $(window.location.hash).offset().top - 50 }, 600, 'linear');
 });
 
 /*****Load function start*****/

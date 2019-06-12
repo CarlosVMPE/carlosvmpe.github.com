@@ -22,8 +22,8 @@
 	var defaults = {
 		selector: '[data-scroll]',
 		selectorHeader: '[data-scroll-header]',
-		speed: 500,
-		easing: 'easeInOutCubic',
+		speed: 600,
+		easing: 'linear',
 		offset: 0,
 		updateURL: true,
 		callback: function () { }
