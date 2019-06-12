@@ -1759,8 +1759,7 @@ body{
         color: #444; }
       .timeline > li > .timeline-panel .institution, .timeline > li > .timeline-panel .duration {
         display: block;
-        font-size: 14px;
-        text-transform: capitalize; }
+        font-size: 14px;}
       .timeline > li > .timeline-panel:after {
         position: absolute;
         top: 30px;
