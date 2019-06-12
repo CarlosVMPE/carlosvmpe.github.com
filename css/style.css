@@ -47,7 +47,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a
 html, body {
   height: inherit;
   width: inherit;
-  min-height: inherit; }
+  min-height: inherit;}
 
 strong {
   font-weight: bold; }
@@ -80,27 +80,6 @@ a:hover, a:active {
 button:focus {
   border: none;
   outline: 0; }
-
-/* width */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: rgb(51, 51, 51); 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #01c853;
-  border-radius: 7px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #2879ff; 
-}
 
 ul {
   list-style: none; }
