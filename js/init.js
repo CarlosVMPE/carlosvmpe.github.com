@@ -68,12 +68,6 @@ function hideNavs() {
 }
 /*****Hide Nav* end*****/
 
-/* NAV */
-
-
-/* NAV */
-
-
 /***** Set height-width function start *****/
 var setHeightWidth = function () {
 	var height = $(window).height();

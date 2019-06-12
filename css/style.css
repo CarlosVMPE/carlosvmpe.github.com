@@ -81,6 +81,27 @@ button:focus {
   border: none;
   outline: 0; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(51, 51, 51); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #01c853;
+  border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2879ff; 
+}
+
 ul {
   list-style: none; }
 
@@ -1592,6 +1613,39 @@ body{
       top: -35px;
     }
 
+/* Portafolio Items */
+.portfolio-wrap{
+  max-width: 940px;
+}
+
+.portf {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portf .item {
+    flex: 0 0 31.2%;
+    max-width: 31.2%;
+    margin: 10px;
+    position: relative;
+}
+
+@media (max-width: 991px){
+  .portf .item {
+    flex: 0 0 47%;
+    max-width: 47%;
+  }
+}
+
+@media (max-width: 767px){
+  .portf .item {
+    margin: 20px 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/*Portafolio Items*/
 /*Profile Sec*/
 .profile-sec .profile-icon {
   font-size: 35px;
@@ -1599,6 +1653,12 @@ body{
   margin-bottom: 45px; }
 
 /*Portfolio Sec*/
+.name-client{
+  position: absolute;
+  left: 5%;
+  font-size: 18px;
+}
+
 .portfolio-sec .bottom-links {
   display: block;
   padding: 11px 30px;
@@ -2159,7 +2219,7 @@ body{
     font-size: 27px; } }
 @media (max-width: 430px) {
   .btn-green{
-    margin: 0;
+    margin: 0 0 10px 0;
   } }
 @media (max-width: 358px) {
   #download_cv.mdl-button {
