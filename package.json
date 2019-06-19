@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosVMPE/carlosvmpe.github.com.git"
+  },
+  "author": "Carlos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosVMPE/carlosvmpe.github.com/issues"
+  },
+  "homepage": "https://github.com/CarlosVMPE/carlosvmpe.github.com#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-uglifycss": "^1.1.0"
+  }
+}
