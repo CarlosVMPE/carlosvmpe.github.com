@@ -28,3 +28,7 @@ $(window).on("resize", function () {
     setHeightWidth();
 }).resize();
 /***** Resize function end *****/
+
+// Edad
+let edad = document.getElementById('edad');
+edad.innerHTML = 2019 - 1996 + ' años';
