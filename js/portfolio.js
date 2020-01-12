@@ -30,5 +30,9 @@ $(window).on("resize", function () {
 /***** Resize function end *****/
 
 // Edad
-let edad = document.getElementById('edad');
+const edad = document.getElementById('edad');
 edad.innerHTML = 2019 - 1996 + ' años';
+
+// Anio
+const anio = document.getElementById('anio');
+anio.innerHTML = new Date().getFullYear();
