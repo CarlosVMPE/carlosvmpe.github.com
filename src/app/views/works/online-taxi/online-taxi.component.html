@@ -1,0 +1,72 @@
+<section class="work-container">
+  <section class="bg-sky"></section>
+  <section class="work-info">
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false"
+      space-between="30" centered-slides="true" autoplay-delay="2000" effect="fade" cssMode="true"
+      autoplay-disable-on-interaction="true">
+      <swiper-slide lazy="true">
+        <img loading="lazy" [src]="'assets/projects/online_taxi/onlinetaxi1.png'" alt="Online Taxi" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/online_taxi/onlinetaxi2.png'" alt="Online Taxi" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/online_taxi/onlinetaxi3.png'" alt="Online Taxi" />
+      </swiper-slide>
+    </swiper-container>
+
+    <aside class="work-description">
+      <section class="description-info">
+        <h2>Información</h2>
+        <p>
+          Ofrece servicios de taxi remisse, corporativo, courier, aeropuerto y eventos.
+        </p>
+      </section>
+      <section class="description-client">
+        <h2>Cliente</h2>
+        <p>Online Taxi</p>
+      </section>
+      <section class="description-social">
+        <a class="link-website bg-online-taxi" href="https://taxionlineperu.com/" target="_blank"
+          rel="noopener noreferrer">
+          Website
+        </a>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined">
+              calendar_month
+            </span>
+            22/08/2018
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              directions_car
+            </span>
+            Transporte
+          </li>
+        </ul>
+      </section>
+    </aside>
+  </section>
+
+  <section class="work-navigation bg-online-taxi">
+    <a href="works/exceltravel">
+      <span class="material-symbols-outlined">
+        arrow_back
+      </span>
+      Excel Travel
+    </a>
+
+    <a href="works/taxipacifico">
+      Taxi Pacífico
+      <span class="material-symbols-outlined">
+        arrow_forward
+      </span>
+    </a>
+  </section>
+</section>
+
+<section class="visit">
+  <h1 class="primary-color">¡Gracias por tu visita!</h1>
+  <h2>Carlos' Portfolio © {{ infoService.getYear() }}</h2>
+</section>

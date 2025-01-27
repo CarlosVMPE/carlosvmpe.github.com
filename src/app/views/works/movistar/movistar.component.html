@@ -1,0 +1,79 @@
+<section class="work-container">
+  <section class="bg-sky"></section>
+  <section class="work-info">
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false"
+      space-between="30" centered-slides="true" autoplay-delay="2000" effect="fade" cssMode="true"
+      autoplay-disable-on-interaction="true">
+      <swiper-slide lazy="true">
+        <img loading="lazy" [src]="'assets/projects/movistar/movistar_total_1.jpg'" alt="Movistar total" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/movistar/movistar_total_2.jpg'" alt="Movistar total" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/movistar/movistar_total_3.jpg'" alt="Movistar total" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/movistar/movistar_total_4.jpg'" alt="Movistar total" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/movistar/movistar_total_5.jpg'" alt="Movistar total" />
+      </swiper-slide>
+    </swiper-container>
+
+    <aside class="work-description">
+      <section class="description-info">
+        <h2>Información</h2>
+        <p>Movistar Total te permite contratar y unir tus productos movistar en uno solo, Hogar + Móvil, con el fin de tenerlos bajo un paquete
+          llamados Movistar Total y contar con mejores beneficios y descuentos.
+        </p>
+      </section>
+      <section class="description-client">
+        <h2>Cliente</h2>
+        <p>Movistar</p>
+      </section>
+      <section class="description-social">
+        <a class="link-website bg-movistar"
+          href="https://movistaronline.pe/movistar-total"
+          target="_blank" rel="noopener noreferrer">
+          Website
+        </a>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined">
+              calendar_month
+            </span>
+            15/06/2019 - 15/02/2021
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              cast
+            </span>
+            Telecomunicación
+          </li>
+        </ul>
+      </section>
+    </aside>
+  </section>
+
+  <section class="work-navigation bg-movistar">
+    <a href="works/yape">
+      <span class="material-symbols-outlined">
+        arrow_back
+      </span>
+      Yape
+    </a>
+
+    <a href="works/taxilima">
+      Taxi Lima
+      <span class="material-symbols-outlined">
+        arrow_forward
+      </span>
+    </a>
+  </section>
+</section>
+
+<section class="visit">
+  <h1 class="primary-color">¡Gracias por tu visita!</h1>
+  <h2>Carlos' Portfolio © {{ infoService.getYear() }}</h2>
+</section>

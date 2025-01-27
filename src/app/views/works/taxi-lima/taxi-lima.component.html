@@ -1,0 +1,79 @@
+<section class="work-container">
+  <section class="bg-sky"></section>
+  <section class="work-info">
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false"
+      space-between="30" centered-slides="true" autoplay-delay="2000" effect="fade" cssMode="true"
+      autoplay-disable-on-interaction="true">
+      <swiper-slide lazy="true">
+        <img loading="lazy" [src]="'assets/projects/taxi_lima/taxi_lima_1.png'" alt="Movistar total" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/taxi_lima/taxi_lima_2.png'" alt="Movistar total" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/taxi_lima/taxi_lima_3.png'" alt="Movistar total" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/taxi_lima/taxi_lima_4.png'" alt="Movistar total" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/taxi_lima/taxi_lima_5.png'" alt="Movistar total" />
+      </swiper-slide>
+    </swiper-container>
+
+    <aside class="work-description">
+      <section class="description-info">
+        <h2>Información</h2>
+        <p>
+          Taxi Lima brinda servicios debidamente formalizados.
+          Se dedican al alquiler de automóviles, transporte de personal, servicio de taxi, servicios VIP y actividades
+          secundarias como mensajería liviana y mecánica automotriz.
+        </p>
+      </section>
+      <section class="description-client">
+        <h2>Cliente</h2>
+        <p>Taxi Lima</p>
+      </section>
+      <section class="description-social">
+        <a class="link-website bg-taxi-lima" href="https://taxilima.com.pe/" target="_blank" rel="noopener noreferrer">
+          Website
+        </a>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined">
+              calendar_month
+            </span>
+            12/02/2019
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              directions_car
+            </span>
+            Transporte
+          </li>
+        </ul>
+      </section>
+    </aside>
+  </section>
+
+  <section class="work-navigation bg-taxi-lima">
+    <a href="works/movistar">
+      <span class="material-symbols-outlined">
+        arrow_back
+      </span>
+      Movistar
+    </a>
+
+    <a href="works/kapitaltaxi">
+      Kapital Taxi
+      <span class="material-symbols-outlined">
+        arrow_forward
+      </span>
+    </a>
+  </section>
+</section>
+
+<section class="visit">
+  <h1 class="primary-color">¡Gracias por tu visita!</h1>
+  <h2>Carlos' Portfolio © {{ infoService.getYear() }}</h2>
+</section>

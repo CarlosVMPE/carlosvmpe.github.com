@@ -1,0 +1,72 @@
+<section class="work-container">
+  <section class="bg-sky"></section>
+  <section class="work-info">
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false"
+      space-between="30" centered-slides="true" autoplay-delay="2000" effect="fade" cssMode="true"
+      autoplay-disable-on-interaction="true">
+      <swiper-slide lazy="true">
+        <img loading="lazy" [src]="'assets/projects/taxi_pacifico/tpacifico.jpg'" alt="Taxi Pacífico" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/taxi_pacifico/tpacifico2.jpg'" alt="Taxi Pacífico" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/taxi_pacifico/tpacifico3.jpg'" alt="Taxi Pacífico" />
+      </swiper-slide>
+    </swiper-container>
+
+    <aside class="work-description">
+      <section class="description-info">
+        <h2>Información</h2>
+        <p>
+          Es una empresa de transporte en la modalidad de taxi estación, constituida el 01 de Setiembre de 1999.
+        </p>
+      </section>
+      <section class="description-client">
+        <h2>Cliente</h2>
+        <p>Taxi Pacífico</p>
+      </section>
+      <section class="description-social">
+        <a class="link-website bg-taxi-pacifico" href="https://www.facebook.com/ATU.TAXIPACIFICO/" target="_blank"
+          rel="noopener noreferrer">
+          Website
+        </a>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined">
+              calendar_month
+            </span>
+            10/07/2018
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              directions_car
+            </span>
+            Transporte
+          </li>
+        </ul>
+      </section>
+    </aside>
+  </section>
+
+  <section class="work-navigation bg-taxi-pacifico">
+    <a href="works/onlinetaxi">
+      <span class="material-symbols-outlined">
+        arrow_back
+      </span>
+      Online Taxi
+    </a>
+
+    <a href="works/amigovip">
+      Amigo Vip
+      <span class="material-symbols-outlined">
+        arrow_forward
+      </span>
+    </a>
+  </section>
+</section>
+
+<section class="visit">
+  <h1 class="primary-color">¡Gracias por tu visita!</h1>
+  <h2>Carlos' Portfolio © {{ infoService.getYear() }}</h2>
+</section>

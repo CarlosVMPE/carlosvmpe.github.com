@@ -1,0 +1,72 @@
+<section class="work-container">
+  <section class="bg-sky"></section>
+  <section class="work-info">
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false"
+      space-between="30" centered-slides="true" autoplay-delay="2000" effect="fade" cssMode="true"
+      autoplay-disable-on-interaction="true">
+      <swiper-slide lazy="true">
+        <img loading="lazy" [src]="'assets/projects/triptico/triptico.jpg'" alt="Tríptico Informativo" />
+      </swiper-slide>
+      <swiper-slide style="height: auto;">
+        <img loading="lazy" [src]="'assets/projects/triptico/triptico2.jpg'" alt="Tríptico Informativo" />
+      </swiper-slide>
+      <swiper-slide>
+        <img loading="lazy" [src]="'assets/projects/triptico/triptico3.jpg'" alt="Tríptico Informativo" />
+      </swiper-slide>
+    </swiper-container>
+
+    <aside class="work-description">
+      <section class="description-info">
+        <h2>Información</h2>
+        <p>
+          Tríptico informativo para la empresa Kapital Taxi.
+        </p>
+      </section>
+      <section class="description-client">
+        <h2>Cliente</h2>
+        <p>Kapital Taxi</p>
+      </section>
+      <section class="description-social">
+        <a class="link-website bg-tarjeta" href="https://kapitalbusiness.pe/" target="_blank"
+          rel="noopener noreferrer">
+          Website
+        </a>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined">
+              calendar_month
+            </span>
+            11/01/2019
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              directions_car
+            </span>
+            Transporte
+          </li>
+        </ul>
+      </section>
+    </aside>
+  </section>
+
+  <section class="work-navigation bg-tarjeta">
+    <a href="works/tarjeta">
+      <span class="material-symbols-outlined">
+        arrow_back
+      </span>
+      Tarjeta Navideña
+    </a>
+
+    <a href="works/tiscompany">
+      Tis Company
+      <span class="material-symbols-outlined">
+        arrow_forward
+      </span>
+    </a>
+  </section>
+</section>
+
+<section class="visit">
+  <h1 class="primary-color">¡Gracias por tu visita!</h1>
+  <h2>Carlos' Portfolio © {{ infoService.getYear() }}</h2>
+</section>

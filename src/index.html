@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Carlos' Portfolio</title>
+  <meta name="theme-color" content="#1d1d1d">
+  <meta name="description" content="Portafolio Personal Carlos Vilchez Malasquez" />
+  <meta name="keywords" content="Carlos Vilchez Malasquez, material design, resume, responsive template, cv, multipurpose, portfolio, html5 template, bootstrap, html5, creative,
+		 landing page, sass, clean, design, modern, angular js" />
+  <meta name="author" content="Carlos" />
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/c.png">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+  <app-root></app-root>
+
+  <script>
+    setTimeout(() => {
+      const menu = document.querySelector('.menu-icon');
+      const options = document.querySelector('.nav-options');
+      const body = document.querySelector('body');
+      if(menu){
+        menu.addEventListener('click', () => {
+        if (options.classList.contains('show-nav')) {
+          body.style.overflowY = 'scroll'
+          options.classList.remove('show-nav')
+        } else {
+
+          body.style.overflowY = 'hidden'
+          options.classList.add('show-nav')
+        }
+      })
+      }
+
+      const anchr = document.querySelectorAll('.nav-options a');
+      anchr.forEach(a => {
+        a.addEventListener('click', () => {
+          if (options.classList.contains('show-nav')) {
+            options.classList.remove('show-nav')
+            body.style.overflowY = 'scroll'
+          } else {
+            body.style.overflowY = 'scroll'
+            options.classList.add('show-nav')
+          }
+        })
+      })
+    }, 800);
+  </script>
+
+</body>
+
+</html>

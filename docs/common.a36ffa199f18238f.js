@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio_2024=self.webpackChunkportfolio_2024||[]).push([[76],{9530:(n,r,e)=>{e.d(r,{O:()=>a});var o=e(540);let a=(()=>{class t{constructor(){}getYear(){return(new Date).getFullYear()}static{this.\u0275fac=function(c){return new(c||t)}}static{this.\u0275prov=o.jDH({token:t,factory:t.\u0275fac,providedIn:"root"})}}return t})()}}]);
