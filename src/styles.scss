@@ -466,7 +466,7 @@ section {
 /* Recent works */
 
 #projects {
-  background-image: url("./assets/projects_bg.png");
+  background-image: url("./assets/projects_bg.webp");
   background-size: clamp(1440px, 100vw, 100vw);
   background-attachment: fixed;
   padding: 5rem 0;
@@ -1177,8 +1177,8 @@ section {
 }
 .swiper-pagination-bullet {
   background: white;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   opacity: 1;
 }
 .swiper-pagination-bullet-active {
