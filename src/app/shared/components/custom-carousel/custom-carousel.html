@@ -1,0 +1,138 @@
+<div class="carousel"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+
+  (focusin)="onFocusIn()"
+  (focusout)="onFocusOut($event)">
+
+  <div
+    #viewport
+    class="carousel__viewport"
+    [ngClass]="{'carousel__without-navigations': !navigation()}"
+
+    (pointerdown)="onPointerDown($event)"
+    (pointermove)="onPointerMove($event)"
+    (pointerup)="onPointerUp($event)"
+    (pointercancel)="onPointerCancel($event)"
+  >
+
+    <div
+      class="carousel__track"
+
+      [class.carousel__track--dragging]="
+        isDragging()
+      "
+
+      [class.carousel__track--no-transition]="
+        !transitionEnabled()
+      "
+
+      [style.transform]="
+        'translate3d(' +
+        translateX +
+        'px, 0, 0)'
+      "
+
+      (transitionend)="onTransitionEnd()"
+    >
+
+      @for (
+        item of renderedItems;
+        track $index
+      ) {
+
+        <div
+          class="carousel__slide"
+          [ngClass]="{'carousel__slide-no-spacing': !navigation()}"
+          [style.width]="slideWidth"
+        >
+
+          <ng-container
+            [ngTemplateOutlet]="itemTemplate()"
+            [ngTemplateOutletContext]="{
+              $implicit: item
+            }"
+          />
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+
+  <!-- PREVIOUS -->
+
+  @if(navigation()){
+    @if (canGoPrevious) {
+
+    <button
+      type="button"
+      class="carousel__button carousel__button--prev"
+      (click)="previous()"
+      aria-label="Anterior"
+    >
+      ‹
+    </button>
+
+  }
+  }
+
+
+  <!-- NEXT -->
+
+  @if(navigation()){
+    @if (canGoNext) {
+
+    <button
+      type="button"
+      class="carousel__button carousel__button--next"
+      (click)="next()"
+      aria-label="Siguiente"
+    >
+      ›
+    </button>
+
+  }
+  }
+
+
+  <!-- PAGINATION -->
+
+  @if(showPagination()){
+    @if (totalItems > currentVisibleItems) {
+
+    <div class="carousel__pagination">
+
+      @for (
+        item of items();
+        track $index
+      ) {
+
+        <button
+          type="button"
+          class="carousel__dot"
+
+          [class.carousel__dot--active]="
+            realIndex === $index
+          "
+
+          (click)="goTo($index)"
+
+          [attr.aria-label]="
+            'Ir al slide ' +
+            ($index + 1)
+          "
+        >
+        </button>
+
+      }
+
+    </div>
+
+  }
+  }
+
+</div>

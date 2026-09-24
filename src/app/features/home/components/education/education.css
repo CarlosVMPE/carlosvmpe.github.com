@@ -1,0 +1,207 @@
+:host {
+  --bg-color: #0f172a;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --color-cyan: #00bcd4;
+  --color-blue: #2979ff;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+
+  display: block;
+  background-color: var(--bg-color);
+}
+
+.education-section {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  padding: 60px 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  letter-spacing: -0.5px;
+}
+
+.timeline-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px;
+  row-gap: 40px;
+}
+
+/* Línea central vertical */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-color);
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  z-index: 2;
+  align-self: start;
+}
+
+.timeline-item.color-cyan .card {
+  box-shadow: 0 4px 16px rgba(47, 230, 223, .22);
+}
+
+.timeline-item.color-blue .card {
+  box-shadow: 0 4px 16px rgba(41, 121, 255, .22);
+}
+
+/* Columna Izquierda */
+.timeline-item.align-left {
+  grid-column: 1;
+  grid-row: auto;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+.timeline-item.align-left .card::after {
+  content: '';
+  position: absolute;
+  right: -49px;
+  top: 30px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  border: 3px solid;
+  z-index: 3;
+}
+
+/* Columna Derecha (con desfase tipo timeline) */
+.timeline-item.align-right {
+  grid-column: 2;
+  grid-row: auto;
+  justify-content: flex-start;
+  margin-top: 60px;
+}
+
+.timeline-item.align-right .card::after {
+  content: '';
+  position: absolute;
+  left: -49px;
+  top: 30px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  border: 3px solid;
+  z-index: 3;
+}
+
+/* Estilos de la Tarjeta */
+.card {
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.education-header h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+/* Sub-elementos y separadores */
+.sub-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-item.with-divider {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.institution {
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 0 0 6px 0;
+}
+
+.period {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Colores personalizados según el tipo (cyan / blue) */
+.timeline-item.color-cyan .card {
+  border-color: var(--color-cyan);
+}
+
+.timeline-item.color-cyan .card h3 {
+  color: var(--color-cyan);
+}
+
+.timeline-item.color-cyan .card::after {
+  border-color: var(--color-cyan);
+}
+
+.timeline-item.color-blue .card {
+  border-color: var(--color-blue);
+}
+
+.timeline-item.color-blue .card h3 {
+  color: var(--color-blue);
+}
+
+.timeline-item.color-blue .card::after {
+  border-color: var(--color-blue);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-item.align-left,
+  .timeline-item.align-right {
+    grid-column: auto;
+    grid-row: auto;
+    justify-content: flex-start !important;
+    margin-top: 0 !important;
+  }
+
+  .timeline-item .card {
+    width: 85% !important;
+    margin-left: 50px !important;
+    margin-right: 0 !important;
+  }
+
+  .timeline-item.align-left .card::after,
+  .timeline-item.align-right .card::after {
+    left: -39px !important;
+    right: auto !important;
+  }
+}

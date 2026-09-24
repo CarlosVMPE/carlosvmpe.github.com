@@ -1,0 +1,83 @@
+<section id="experience" class="experience-section">
+  <h2 class="section-title">Experiencia</h2>
+
+  <div class="timeline-container">
+    @for (exp of experiences(); track exp.company; let i = $index) {
+    <div class="timeline-item" [ngClass]="{
+      'align-left': i % 2 !== 0,
+      'align-right': i % 2 === 0,
+      'color-cyan': exp.color === 'cyan',
+      'color-blue': exp.color === 'blue'
+    }">
+      <div class="card">
+
+        <div class="company-header">
+          <h3>{{ exp.company }}</h3>
+
+          @if (exp.role) {
+          <h4>{{ exp.role }}</h4>
+          }
+        </div>
+
+        <div class="projects-list">
+
+          @for (project of exp.projects; track project.role; let y = $index) {
+
+          @if (i === 0) {
+
+          <!-- SOLO LA PRIMERA EXPERIENCIA USA COLLAPSE -->
+          <div class="collapse collapse-arrow bg-transparent border mb-4 border-cyan border-base-300">
+            <input [id]="`collapse-${i}-${y}-toggle`" type="checkbox" class="peer" [checked]="y === 0" />
+
+            <label [attr.for]="`collapse-${i}-${y}-toggle`" class="fixed inset-0 hidden"></label>
+
+            <div class="collapse-title project-block">
+              <h4 class="role">
+                {{ project.role }}
+              </h4>
+              <p class="period">
+                {{ project.period }}
+              </p>
+            </div>
+
+            <div class="collapse-content text-sm z-1">
+              <ul class="points-list">
+                @for (point of project.points; track point) {
+                <li>{{ point }}</li>
+                }
+              </ul>
+            </div>
+          </div>
+
+          } @else {
+
+          <!-- LAS DEMÁS EXPERIENCIAS NO USAN COLLAPSE -->
+          <div class="project-block">
+
+            <h4 class="role">
+              {{ project.role }}
+            </h4>
+
+            <p class="period">
+              {{ project.period }}
+            </p>
+
+            <ul class="points-list">
+              @for (point of project.points; track point) {
+              <li>{{ point }}</li>
+              }
+            </ul>
+
+          </div>
+
+          }
+
+          }
+
+        </div>
+      </div>
+    </div>
+    }
+
+  </div>
+</section>

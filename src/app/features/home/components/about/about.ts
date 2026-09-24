@@ -1,0 +1,11 @@
+import { Component, computed } from '@angular/core';
+
+@Component({
+  selector: 'app-about',
+  imports: [],
+  templateUrl: './about.html',
+  styleUrl: './about.css',
+})
+export class About {
+  experienceYears = computed(() => new Date().getFullYear() - 2018)
+}

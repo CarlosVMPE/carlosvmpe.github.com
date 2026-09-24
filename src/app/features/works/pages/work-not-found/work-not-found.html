@@ -1,0 +1,64 @@
+<!-- Barra superior simulando la cabecera de la app -->
+<header class="top-bar m-0 p-0">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
+    <span class="app-brand text-2xl">Sin resultados</span>
+    <span class="app-badge text-white/90">No encontrado</span>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 md:px-10 py-14 md:py-11 grid grid-cols-1 lg:grid-cols-[1fr_320px]
+    gap-12 lg:gap-12">
+  <!-- Columna Izquierda: Mensaje principal y Mockup visual -->
+  <section class="content-left">
+    <div class="text-block">
+      <span class="error-code">404</span>
+      <h1>{{ notFound().title }}</h1>
+      <p>{{ notFound().description }}</p>
+
+      <div class="tags-container">
+        <span class="tag">error</span>
+        <span class="tag">desconocido</span>
+        <span class="tag">recurso</span>
+        <span class="tag">vacío</span>
+      </div>
+    </div>
+
+    <!-- Contenedor visual moderno simulando el mockup -->
+    <app-mockup-card>
+      <section class="py-7 px-5 mx-auto">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <p class="illustration-text">No se encontraron registros en este enlace</p>
+      </section>
+    </app-mockup-card>
+  </section>
+
+  <!-- Columna Derecha: Panel de metadatos (Idéntico a tu estructura) -->
+  <aside class="content-right sheet">
+    <!-- Botón de acción principal -->
+    <a routerLink="/" class="action-button">
+      Volver al inicio
+      <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </a>
+
+    <div class="meta-list">
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value text-accent">No disponible</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Código</span>
+        <span class="meta-value">HTTP 404</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Categoría</span>
+        <span class="meta-value">Navegación</span>
+      </div>
+    </div>
+  </aside>
+</main>

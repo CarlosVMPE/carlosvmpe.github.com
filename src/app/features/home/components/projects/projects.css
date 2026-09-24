@@ -1,0 +1,81 @@
+#projects {
+  background-image: url("/assets/projects_bg.webp");
+  background-size: clamp(1440px, 100vw, 100vw);
+  background-attachment: fixed;
+  padding: 5rem 0;
+}
+
+.portfolio {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  height: auto;
+  margin: auto auto 4rem;
+}
+
+.projects-title h1 {
+  font-size: 4rem;
+  line-height: 6rem;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+/* Card portfolio */
+.card-project {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  color: var(--background);
+}
+
+.project-options {
+  background: white;
+  position: relative;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 10px;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-top-width: 5px;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-image-source: linear-gradient(to left, oklch(59.6% 0.145 163.225), oklch(67.3% 0.182 276.935));
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.project-options h5 {
+  display: flex;
+  flex: auto;
+  margin: 0;
+  text-align: left;
+}
+
+.project-options a {
+  color: var(--background);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media only screen and (width < 900px) {
+  .projects-title h1 {
+    font-size: clamp(3rem, 10vw, 4rem);
+    line-height: clamp(4rem, 12vw, 6rem);
+  }
+}

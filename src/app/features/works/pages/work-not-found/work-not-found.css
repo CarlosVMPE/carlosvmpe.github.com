@@ -1,0 +1,173 @@
+:host {
+  --bg-main: #0f172a;
+  --bg-topbar: #7f1d1d;
+  /* Rojo elegante similar a tu ejemplo */
+  --card-bg: #1e293b;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --accent-color: #00bcd4;
+
+  display: block;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+/* Barra superior */
+.top-bar {
+  background-color: var(--bg-topbar);
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar section{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-badge {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+/* Layout principal de dos columnas */
+.not-found-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .not-found-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Columna Izquierda */
+.content-left .error-code {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.content-left h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.content-left p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 650px;
+  margin-bottom: 24px;
+}
+
+/* Etiquetas inferiores */
+.tags-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.tag {
+  background-color: var(--card-bg);
+  color: var(--text-secondary);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-color);
+}
+
+.search-icon {
+  width: 70px;
+  height: 70px;
+  color: var(--text-secondary);
+  margin: 0 auto 16px;
+  opacity: 0.6;
+}
+
+.illustration-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Columna Derecha (Panel Lateral) */
+.content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.action-button {
+  background-color: var(--bg-topbar);
+  /* Tono rojo oscuro elegante acorde al diseño */
+  color: var(--text-primary);
+  border: 1px solid #991b1b;
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:hover {
+  background-color: #991b1b;
+  transform: translateY(-2px);
+}
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.meta-list {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.meta-label {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.meta-value {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.text-accent {
+  color: #ef4444;
+}

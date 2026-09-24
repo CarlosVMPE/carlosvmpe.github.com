@@ -1,3 +1,122 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
 
-@import 'tailwindcss';
+@theme {
+  --font-montserrat: "Montserrat", system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@plugin "daisyui" {
+  themes: forest --default, forest --prefersdark, sunset, forest, winter, light;
+}
+
+body {
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #222831;
+  color: #eeeeee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+:root {
+  --primary: #00adb5;
+  --blue: #536dfe;
+  --background: #222831;
+  --background2: #393e46;
+  --background2-opacity: 0.7;
+  --background2-with-opacity: rgba(57, 62, 70, var(--background2-opacity));
+  --text: #eeeeee;
+  --nav-height: 90px;
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.color-secondary {
+  color: var(--blue);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+.border-secondary {
+  border-color: var(--blue);
+}
+
+section {
+  position: relative;
+}
+
+.primary-color {
+  color: var(--primary);
+}
+
+/* Buttons */
+.primary-button,
+.secondary-button {
+  color: var(--text);
+  padding: 10px 32px;
+  border-radius: 1000px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.primary-button {
+  background: var(--primary);
+  border-radius: 6px;
+}
+
+.secondary-button {
+  background: var(--background2-with-opacity);
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
+}
+
+/* Sheet border */
+.sheet {
+  border-left: 1px solid var(--line);
+  padding-left: 2rem;
+
+  @media (max-width: 1023px) {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 2rem;
+    margin-top: 1rem;
+  }
+}
