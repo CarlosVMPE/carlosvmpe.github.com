@@ -32,7 +32,9 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'dsg',
     navigationRight: 'supervielle',
     link: 'https://www.jmagroup.com/finance-and-insurance/gyde',
-    tags: ['automotriz', 'ventas', 'financiamiento', 'seguros', 'productos', 'vehiculos'],
+    tags: [
+      'automotriz', 'ventas', 'financiamiento', 'seguros', 'productos', 'vehiculos', 'dealer', 'vendedor',
+      'reportes', 'dashboard', 'cotización'],
     images: [
       '/assets/projects/jmf/jmf.png',
       '/assets/projects/jmf/jmf2.png',
@@ -51,7 +53,10 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'jm-family',
     navigationRight: 'yape',
     link: 'https://www.supervielle.com.ar/negocios/pymes/servicios-digitales/online-banking-empresas',
-    tags: ['banca', 'movil', 'capital humano', 'empresas', 'transferencias'],
+    tags: [
+      'banca', 'movil', 'capital humano', 'empresas', 'transferencias', 'inmediatas', 'masivas',
+      'judiciales', '24/48 horas', 'contactos', 'online', 'banking'
+    ],
     images: [
       '/assets/projects/spv/spv_empresas.jpg',
       '/assets/projects/spv/trf_home.png',
@@ -71,7 +76,7 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'supervielle',
     navigationRight: 'movistar',
     link: 'https://www.yape.com.pe/',
-    tags: ['banca', 'movil', 'capital humano', 'empresas', 'centro de ayuda'],
+    tags: ['banca', 'app', 'movil', 'capital humano', 'empresas', 'centro de ayuda', 'yape', 'preguntas'],
     images: [
       '/assets/projects/yape/yape1.png',
       '/assets/projects/yape/yape2.png',
@@ -91,7 +96,8 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'yape',
     navigationRight: 'taxi-lima',
     link: 'https://movistaronline.pe/hogar/movistar-total',
-    tags: ['hogar', 'movil', 'internet', 'fijo', 'tv', 'duo', 'trio', 'postpago', 'ofertas'],
+    tags: ['hogar', 'movil', 'internet', 'fijo', 'tv', 'duo', 'trio', 'postpago', 'ofertas', 'ventas',
+          'promociones', 'descuentos', 'paquetes', 'clientes'],
     images: [
       '/assets/projects/movistar/movistar_total_1.jpg',
       '/assets/projects/movistar/movistar_total_2.jpg',
@@ -111,7 +117,7 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'movistar',
     navigationRight: 'kapital-taxi',
     link: '',
-    tags: ['transporte', 'taxi', 'reserva', 'viajes'],
+    tags: ['app', 'transporte', 'taxi', 'reserva', 'viajes'],
     images: [
       '/assets/projects/taxi_lima/taxi_lima_1.png',
       '/assets/projects/taxi_lima/taxi_lima_2.png',
@@ -131,7 +137,7 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'taxi-lima',
     navigationRight: 'excel-travel',
     link: 'https://kapitalbusiness.pe/',
-    tags: ['transporte', 'taxi', 'courier', 'remisse', 'ejecutivo', 'reserva', 'viajes', 'servicio programado'],
+    tags: ['app', 'transporte', 'taxi', 'courier', 'remisse', 'ejecutivo', 'reserva', 'viajes', 'servicio programado'],
     images: [
       '/assets/projects/kapital_taxi/tkapital.jpg',
       '/assets/projects/kapital_taxi/tkapital2.jpg',
@@ -149,7 +155,7 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'kapital-taxi',
     navigationRight: 'online-taxi',
     link: 'https://excelperu.com/',
-    tags: ['transporte', 'taxi', 'tour', 'courier', 'ejecutivo', 'reserva', 'viajes', 'servicio programado'],
+    tags: ['app', 'transporte', 'taxi', 'tour', 'courier', 'ejecutivo', 'reserva', 'viajes', 'servicio programado'],
     images: [
       '/assets/projects/excel_travel/etravel1.png',
       '/assets/projects/excel_travel/etravel2.png',
@@ -167,7 +173,7 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'excel-travel',
     navigationRight: 'taxi-pacifico',
     link: 'https://taxionlineperu.com/',
-    tags: ['transporte', 'taxi', 'remisee', 'courier', 'ejecutivo', 'aeropuerto', 'eventos', 'servicio programado'],
+    tags: ['app', 'transporte', 'taxi', 'remisee', 'courier', 'ejecutivo', 'aeropuerto', 'eventos', 'servicio programado'],
     images: [
       '/assets/projects/online_taxi/onlinetaxi1.png',
       '/assets/projects/online_taxi/onlinetaxi2.png',
@@ -185,7 +191,7 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'online-taxi',
     navigationRight: 'amigo-vip',
     link: 'https://www.facebook.com/ATU.TAXIPACIFICO/',
-    tags: ['transporte', 'taxi', 'remisee', 'courier', 'ejecutivo', 'aeropuerto', 'eventos', 'servicio programado'],
+    tags: ['app', 'transporte', 'taxi', 'remisee', 'courier', 'ejecutivo', 'aeropuerto', 'eventos', 'servicio programado'],
     images: [
       '/assets/projects/taxi_pacifico/tpacifico.jpg',
       '/assets/projects/taxi_pacifico/tpacifico2.jpg',
@@ -203,7 +209,7 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'taxi-pacifico',
     navigationRight: 'tis-company',
     link: 'https://grupoamigovip.com/',
-    tags: ['transporte', 'taxi', 'remisee', 'courier', 'ejecutivo', 'aeropuerto', 'eventos', 'servicio programado'],
+    tags: ['app', 'transporte', 'taxi', 'remisee', 'courier', 'ejecutivo', 'aeropuerto', 'eventos', 'servicio programado'],
     images: [
       '/assets/projects/amigo_vip/amigovip.jpg',
       '/assets/projects/amigo_vip/amigovip2.jpg',
@@ -221,7 +227,7 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'taxi-pacifico',
     navigationRight: 'tarjeta-navidad',
     link: '',
-    tags: ['eventos', 'corporativos', 'institucionales', 'marketing', 'sociales'],
+    tags: ['eventos', 'corporativos', 'institucionales', 'marketing', 'sociales', 'generales'],
     images: [
       '/assets/projects/tis_company/tcompany.jpg',
       '/assets/projects/tis_company/tcompany2.jpg',
@@ -239,7 +245,7 @@ export const WORKS_MOCK: Work[] = [
     navigationLeft: 'tis-company',
     navigationRight: 'triptico-publicitario',
     link: 'https://gruponelica.com/navidad2018/',
-    tags: ['tarjeta', 'navidad', 'visperas', 'compartir', 'experiencias', 'recuerdos', 'animaciones'],
+    tags: ['tarjeta', 'navidad', 'visperas', 'compartir', 'experiencias', 'recuerdos', 'animaciones', 'noche buena'],
     images: [
       '/assets/projects/tarjeta/tarjeta.jpg',
       '/assets/projects/tarjeta/tarjeta2.jpg',
@@ -255,9 +261,9 @@ export const WORKS_MOCK: Work[] = [
     date: 'Enero 2019',
     type: 'Transporte',
     navigationLeft: 'tarjeta-navidad',
-    navigationRight: 'supervielle',
+    navigationRight: 'dsg',
     link: 'https://kapitalbusiness.pe/',
-    tags: ['triptico', 'banner', 'publicidad', 'servicios', 'ventas'],
+    tags: ['triptico', 'banner', 'publicidad', 'servicios', 'productos', 'ventas'],
     images: [
       '/assets/projects/triptico/triptico.jpg',
       '/assets/projects/triptico/triptico2.jpg',

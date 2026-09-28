@@ -3,6 +3,9 @@ import {
   Component,
   ElementRef,
   HostListener,
+  OnDestroy,
+  OnChanges,
+  SimpleChanges,
   TemplateRef,
   ViewChild,
   input,
@@ -18,7 +21,7 @@ import { NgTemplateOutlet, NgClass } from '@angular/common';
   templateUrl: './custom-carousel.html',
   styleUrl: './custom-carousel.css'
 })
-export class CustomCarousel<T> implements AfterViewInit {
+export class CustomCarousel<T> implements AfterViewInit, OnChanges, OnDestroy {
 
   items = input.required<T[]>();
 
@@ -62,7 +65,9 @@ export class CustomCarousel<T> implements AfterViewInit {
 
   private startX = 0;
 
-  private viewportWidth = 0;
+  private viewportWidth = signal(0);
+
+  private viewportResizeObserver?: ResizeObserver;
 
 
   // =====================================================
@@ -233,12 +238,14 @@ export class CustomCarousel<T> implements AfterViewInit {
 
   get translateX(): number {
 
-    if (!this.viewportWidth) {
+    const viewportWidth = this.viewportWidth();
+
+    if (!viewportWidth) {
       return 0;
     }
 
     const slideWidth =
-      this.viewportWidth /
+      viewportWidth /
       this.currentVisibleItems;
 
 
@@ -259,17 +266,70 @@ export class CustomCarousel<T> implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
+    this.viewportResizeObserver = new ResizeObserver(() => {
+      this.updateViewportWidth();
+    });
+    this.viewportResizeObserver.observe(this.viewport.nativeElement);
     this.updateViewportWidth();
 
     if (this.loop()) {
+      this.transitionEnabled.set(false);
 
       this.currentIndex.set(
         this.initialIndex
       );
 
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          this.transitionEnabled.set(true);
+        });
+      });
+
     }
 
     this.startAutoplay();
+
+  }
+
+  ngOnDestroy(): void {
+
+    this.viewportResizeObserver?.disconnect();
+    this.stopAutoplay();
+
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+
+    if (
+      !changes['items'] ||
+      changes['items'].firstChange ||
+      !this.viewport
+    ) {
+      return;
+    }
+
+    this.transitionEnabled.set(false);
+
+    this.updateViewportWidth();
+    this.setPositionWithoutTransition(
+      this.loop() ? this.initialIndex : 0
+    );
+
+    this.restartAutoplay();
+
+  }
+
+  private setPositionWithoutTransition(index: number): void {
+
+    this.transitionEnabled.set(false);
+    this.currentIndex.set(index);
+    this.dragX.set(0);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        this.transitionEnabled.set(true);
+      });
+    });
 
   }
 
@@ -292,8 +352,9 @@ export class CustomCarousel<T> implements AfterViewInit {
       return;
     }
 
-    this.viewportWidth =
-      this.viewport.nativeElement.clientWidth;
+    this.viewportWidth.set(
+      this.viewport.nativeElement.getBoundingClientRect().width
+    );
 
   }
 
@@ -631,7 +692,7 @@ export class CustomCarousel<T> implements AfterViewInit {
       this.dragX();
 
     const threshold =
-      this.viewportWidth * 0.15;
+      this.viewportWidth() * 0.15;
 
 
     if (
