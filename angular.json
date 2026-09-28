@@ -28,9 +28,7 @@
                 "input": "src/assets"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ]
+            "styles": ["src/styles.css"]
           },
           "configurations": {
             "production": {
@@ -59,10 +57,7 @@
         "serve": {
           "options": {
             "liveReload": true,
-            "allowedHosts": [
-              ".ngrok-free.dev",
-              ".ngrok-free.app"
-            ]
+            "allowedHosts": [".ngrok-free.dev", ".ngrok-free.app"]
           },
           "builder": "@angular/build:dev-server",
           "configurations": {
@@ -77,6 +72,9 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

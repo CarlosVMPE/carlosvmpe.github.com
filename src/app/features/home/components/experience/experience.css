@@ -245,7 +245,7 @@
   }
 
   .timeline-container::before {
-    left: 20px;
+    left: 7px;
   }
 
   .timeline-item.align-left,
@@ -256,15 +256,16 @@
     margin-top: 0 !important;
   }
 
-  .timeline-item .card {
-    width: 85% !important;
-    margin-left: 50px !important;
-    margin-right: 0 !important;
+  .timeline-item.align-left .card,
+  .timeline-item.align-right .card{
+    margin-left: 27px;
+    margin-right: 0;
+    padding: 1.1rem 1rem;
   }
 
   .timeline-item.align-left .card::after,
   .timeline-item.align-right .card::after {
-    left: -39px !important;
+    left: -29px !important;
     right: auto !important;
   }
 }
