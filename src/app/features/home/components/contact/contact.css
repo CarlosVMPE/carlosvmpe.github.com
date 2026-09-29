@@ -6,8 +6,8 @@
 }
 
 #contact h1 {
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: clamp(3rem, 10vw, 3.5rem);
+  line-height: clamp(4rem, 12vw, 6rem);
   font-weight: 700;
   margin: 2rem 0;
 }
