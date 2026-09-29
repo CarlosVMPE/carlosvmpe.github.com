@@ -107,6 +107,15 @@
   right: 15px;
 }
 
+@media (max-width: 767px) {
+  .carousel__button--prev {
+    left: 0px;
+  }
+
+  .carousel__button--next {
+    right: 0px;
+  }
+}
 
 /* =========================
    PAGINATION

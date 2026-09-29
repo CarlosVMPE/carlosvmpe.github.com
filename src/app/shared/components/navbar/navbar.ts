@@ -1,4 +1,5 @@
-import { Component, HostListener, signal } from '@angular/core';
+import { Component, HostListener, inject, signal } from '@angular/core';
+import { LanguageService } from '@shared/services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,10 +15,9 @@ export class Navbar {
   // Sección activa actual del portafolio
   activeSection = signal<string>('home');
 
-  // Idioma actual usando un Signal (Empieza en 'es')
-  currentLang = signal<'es' | 'en'>('es');
-
   private readonly scrollOffset = 60;
+
+  language = inject(LanguageService);
 
   // Función para alternar la visibilidad del menú
   toggleMenu() {
@@ -66,11 +66,5 @@ export class Navbar {
     if (currentSection !== this.activeSection()) {
       this.activeSection.update(() => currentSection);
     }
-  }
-
-  toggleLanguage() {
-    this.currentLang.update(lang => lang === 'es' ? 'en' : 'es');
-    console.log('Idioma cambiado a:', this.currentLang);
-    // Aquí puedes implementar la lógica para recargar textos o cambiar el idioma de tu app
   }
 }

@@ -1,7 +1,7 @@
 /* Tech Skills */
 
 #skills {
-  display: block;
+  /* display: block; */
   width: 80%;
   margin: auto;
   padding: 6rem 0;
@@ -9,9 +9,8 @@
 
 #skills h1,
 .experience h1 {
-  font-size: 3rem;
-  line-height: 4rem;
-  font-weight: 700;
+  font-size: clamp(2.5rem, 10vw, 4rem);
+  line-height: clamp(4rem, 12vw, 6rem);
   margin: 2rem 0;
 }
 

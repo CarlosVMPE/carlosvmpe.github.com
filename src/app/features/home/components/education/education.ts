@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '@shared/services/language.service';
 
 interface EducationItem {
-  title: string;
+  title: 'education.software' | 'education.english';
   subItems: SubEducation[]; // Soporta uno o varios sub-estudios
   colorClass: 'color-cyan' | 'color-blue';
   alignClass: 'align-left' | 'align-right';
@@ -11,6 +12,7 @@ interface EducationItem {
 interface SubEducation {
   institution: string;
   period: string;
+  ongoing?: boolean;
 }
 
 @Component({
@@ -21,9 +23,10 @@ interface SubEducation {
   styleUrls: ['./education.css']
 })
 export class EducationComponent {
+  readonly language = inject(LanguageService);
   educationList: EducationItem[] = [
     {
-      title: 'Ingeniería de Software',
+      title: 'education.software',
       subItems: [
         {
           institution: 'Universidad Tecnológica del Perú',
@@ -34,11 +37,12 @@ export class EducationComponent {
       alignClass: 'align-left'
     },
     {
-      title: 'Inglés - Intermedio',
+      title: 'education.english',
       subItems: [
         {
           institution: 'Portal Go Fluent (Globant) & Duolingo',
-          period: '2024 - Actualmente'
+          period: '2024 -',
+          ongoing: true
         },
         {
           institution: 'Instituto de Inglés de la UTP',

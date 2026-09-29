@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
-import { Component, signal } from '@angular/core';
-import { allExperiences, ExperienceItem } from '@shared/models/experience';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '@shared/services/language.service';
 
 @Component({
   selector: 'app-experience',
@@ -9,5 +9,5 @@ import { allExperiences, ExperienceItem } from '@shared/models/experience';
   styleUrl: './experience.css',
 })
 export class Experience {
-  readonly experiences = signal<ExperienceItem[]>(allExperiences);
+  readonly language = inject(LanguageService);
 }

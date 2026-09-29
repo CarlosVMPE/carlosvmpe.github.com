@@ -20,14 +20,13 @@
   background-color: var(--bg-color);
   color: var(--text-primary);
   padding: 6rem 20px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .experience-section .section-title {
-  font-size: 2.8rem;
-  font-weight: 700;
+  font-size: clamp(3rem, 10vw, 3.5rem);
+  line-height: clamp(4rem, 12vw, 6rem);
   margin-bottom: 60px;
   letter-spacing: -0.5px;
 }
@@ -74,7 +73,7 @@
   box-shadow: 0 4px 16px rgba(41, 121, 255, .22);
 }
 
-.border-cyan{
+.border-cyan {
   border-color: var(--color-cyan);
 }
 
@@ -257,7 +256,7 @@
   }
 
   .timeline-item.align-left .card,
-  .timeline-item.align-right .card{
+  .timeline-item.align-right .card {
     margin-left: 27px;
     margin-right: 0;
     padding: 1.1rem 1rem;

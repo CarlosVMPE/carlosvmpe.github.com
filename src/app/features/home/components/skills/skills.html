@@ -1,6 +1,9 @@
 <section id="skills" class="skills">
   <section class="tech-skills">
-    <h1><span>Habilidades&nbsp;</span><span class="primary-color">Técnicas</span></h1>
+    <h1 class="flex gap-2" [ngClass]="language.current() == 'en' ? 'flex-col-reverse sm:flex-row-reverse justify-end' : ''">
+      <span>{{ language.t('skills.titleLead') }}</span>
+      <span class="primary-color">{{ language.t('skills.technical') }}</span>
+    </h1>
 
     <ng-template #projectTemplate let-skill>
       <article class="card-skill">
@@ -18,48 +21,49 @@
   </section>
 
   <section class="soft-skills">
-    <h1><span>Habilidades&nbsp;</span><span class="primary-color">Blandas</span></h1>
+    <h1 class="flex gap-2 text-2xl sm:text-5xl" [ngClass]="language.current() == 'en' ? 'flex-row-reverse justify-end' : ''"
+    ><span>{{ language.t('skills.titleLead') }} </span><span class="primary-color">{{ language.t('skills.soft') }}</span></h1>
     <ul>
       <li>
         <img width="128" height="128"
           src="https://cdn-icons-png.flaticon.com/128/2464/2464191.png"
-          alt="Buena actitud" />
-        Actitud Positiva
+          [alt]="language.t('skills.positiveAttitude')" />
+        {{ language.t('skills.positiveAttitude') }}
       </li>
       <li>
         <img width="128" height="128" src="https://cdn-icons-png.flaticon.com/128/3201/3201615.png"
-          alt="Buena comunicación" />
-        Comunicación
+          [alt]="language.t('skills.communication')" />
+        {{ language.t('skills.communication') }}
       </li>
       <li>
         <img width="128" height="128" src="https://cdn-icons-png.flaticon.com/128/10162/10162796.png"
-          alt="Comprometido" />
-        Compromiso
+          [alt]="language.t('skills.commitment')" />
+        {{ language.t('skills.commitment') }}
       </li>
       <li>
         <img width="128" height="128"
-        src="https://cdn-icons-png.flaticon.com/128/1703/1703879.png" alt="Creativo" />
-        Creatividad
+        src="https://cdn-icons-png.flaticon.com/128/1703/1703879.png" [alt]="language.t('skills.creativity')" />
+        {{ language.t('skills.creativity') }}
       </li>
       <li>
         <img width="128" height="128" src="https://cdn-icons-png.flaticon.com/128/10822/10822464.png"
-          alt="Iniciativa propia" />
-        Iniciativa
+          [alt]="language.t('skills.initiative')" />
+        {{ language.t('skills.initiative') }}
       </li>
       <li>
         <img width="128" height="128"
-        src="https://cdn-icons-png.flaticon.com/128/2245/2245238.png" alt="Multi tarea" />
-        Multitarea
+        src="https://cdn-icons-png.flaticon.com/128/2245/2245238.png" [alt]="language.t('skills.multitasking')" />
+        {{ language.t('skills.multitasking') }}
       </li>
       <li>
         <img width="128" height="128" src="https://cdn-icons-png.flaticon.com/128/2191/2191159.png"
-          alt="Responsable" />
-        Responsabilidad
+          [alt]="language.t('skills.responsibility')" />
+        {{ language.t('skills.responsibility') }}
       </li>
       <li>
         <img width="128" height="128" src="https://cdn-icons-png.flaticon.com/128/7185/7185645.png"
-          alt="Facilidad de trabajo en equipo" />
-        Trabajo en equipo
+          [alt]="language.t('skills.teamwork')" />
+        {{ language.t('skills.teamwork') }}
       </li>
     </ul>
   </section>

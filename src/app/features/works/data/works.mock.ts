@@ -6,7 +6,7 @@ export const WORKS_MOCK: Work[] = [
     brandColor: '#006554',
     companyName: "Dick's Sporting Goods",
     project: 'Web Checkout - List & Services UI',
-    description: "Dick's Sporting Goods, Inc.es una cadena estadounidense de tiendas de artículos deportivos, ropa atlética, calzado, accesorios para variedad de deportes y actividades al aire libre, como beísbol, fútbol, básquetbol, golf, etc.",
+    description: "Dick's Sporting Goods, Inc. es una cadena estadounidense de tiendas de artículos deportivos, ropa atlética, calzado, accesorios para variedad de deportes y actividades al aire libre, como beísbol, fútbol, básquetbol, golf, etc.",
     date: 'Actualidad',
     type: 'Retail - Ecommerce',
     navigationLeft: 'triptico-publicitario',

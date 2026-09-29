@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ToggleLanguage } from '@shared/components/toggle-language/toggle-language';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ToggleLanguage],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

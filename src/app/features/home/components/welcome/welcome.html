@@ -9,19 +9,21 @@
       </svg>
       <div class="hero-text-container">
         <div class="hero-title">
-          <h1>Bienvenido a mi&nbsp;</h1>
-          <h1 class="primary-color">Portafolio personal&nbsp;</h1>
+          <h1>{{ language.t('home.welcome') }}</h1>
+          <h1 class="primary-color">{{ language.t('home.portfolio') }}</h1>
           <br>
           <h2 class="text-2xl">Carlos Vilchez Malasquez</h2>
-          <h2 class="text-xl primary-color">Software Engineer</h2>
+          <h2 class="text-xl primary-color">{{ language.t('home.job') }}</h2>
         </div>
         <div class="hero-buttons">
           <a href="#projects" class="w-full sm:w-auto">
-            <button class="primary-button w-full"><span>Proyectos</span></button>
+            <button class="primary-button w-full"><span>{{ language.t('home.projects') }}</span></button>
           </a>
-          <a href="/assets/CV_Carlos_Vilchez_Malasquez.pdf" target="_blank" class="w-full sm:w-auto">
+          <a
+          [href]="language.current() == 'es' ? '/assets/CV_Carlos_Vilchez_Malasquez.pdf': '/assets/CV_Carlos_Vilchez_Malasquez_EN.pdf'"
+          target="_blank" class="w-full sm:w-auto">
             <button class="secondary-button w-full">
-              <span>Descargar CV</span><svg class="w-5 h-5" viewBox="0 0 20 21"
+              <span>{{ language.t('home.cv') }}</span><svg class="w-5 h-5" viewBox="0 0 20 21"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M19 13.5V17.5C19 18.0304 18.7893 18.5391 18.4142 18.9142C18.0391 19.2893 17.5304 19.5 17 19.5H3C2.46957 19.5 1.96086 19.2893 1.58579 18.9142C1.21071 18.5391 1 18.0304 1 17.5V13.5"

@@ -6,7 +6,7 @@
       <span>arlos</span>
     </a>
   </div>
-  <button class="menu-icon" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen()" aria-label="Abrir menú">
+  <button class="menu-icon" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen()" [attr.aria-label]="language.t('nav.openMenu')">
     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink">
       <mask id="mask0_68_110" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30" style="mask-type: alpha;">
@@ -37,7 +37,7 @@
               <path d="M9 21v-6h6v6" />
             </svg>
           </div>
-          <span>Inicio</span>
+          <span>{{ language.t('nav.home') }}</span>
         </a>
       </li>
       <li [class.active]="activeSection() === 'about'">
@@ -48,7 +48,7 @@
               <circle cx="12" cy="8" r="4" />
               <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" />
             </svg>
-          </div><span>Sobre mi</span>
+          </div><span>{{ language.t('nav.about') }}</span>
         </a>
       </li>
 
@@ -62,7 +62,7 @@
               <path d="M3 11h18" />
             </svg>
           </div>
-          <span>Proyectos</span>
+          <span>{{ language.t('nav.projects') }}</span>
         </a>
       </li>
 
@@ -76,7 +76,7 @@
             </svg>
 
           </div>
-          <span>Habilidades</span>
+          <span>{{ language.t('nav.skills') }}</span>
         </a>
       </li>
       <li [class.active]="activeSection() === 'experience'">
@@ -91,7 +91,7 @@
               <path d="M9 10.5h6" />
             </svg>
           </div>
-          <span>Experiencia</span>
+          <span>{{ language.t('nav.experience') }}</span>
         </a>
       </li>
 
@@ -113,23 +113,12 @@
                  c.9.3 1.9.6 2.9.7
                  A2 2 0 0 1 22 16.9Z" />
             </svg>
-          </div><span>Contacto</span>
+          </div><span>
+            {{ language.t('nav.contact') }}
+          </span>
         </a>
       </li>
       <div></div>
     </ul>
   </nav>
 </header>
-
-<!-- Botón flotante para cambiar de idioma -->
-<button (click)="toggleLanguage()"
-  class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#1e293b]/90 text-white px-4 py-3 rounded-full shadow-2xl border border-slate-700 hover:border-[#00bcd4] hover:bg-[#1e293b] transition-all duration-300 backdrop-blur-md group"
-  aria-label="Cambiar idioma">
-  <svg class="w-5 h-5 text-[#00bcd4] group-hover:rotate-180 transition-transform duration-500" fill="none"
-    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
-    </path>
-  </svg>
-  <span class="text-sm font-semibold tracking-wider uppercase">{{ currentLang() }}</span>
-</button>

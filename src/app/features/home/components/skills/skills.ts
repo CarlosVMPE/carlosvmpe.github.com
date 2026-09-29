@@ -1,15 +1,19 @@
-import { Component, signal } from '@angular/core';
+import { NgClass } from '@angular/common';
+import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { CustomCarousel } from '@shared/components/custom-carousel/custom-carousel';
 import { Skills, skills } from '@shared/models/skills';
+import { LanguageService } from '@shared/services/language.service';
+
 
 @Component({
   selector: 'app-skills',
-  imports: [CustomCarousel],
+  imports: [CustomCarousel, NgClass],
   templateUrl: './skills.html',
   styleUrl: './skills.css',
 })
 export class SkillsComponent {
+  readonly language = inject(LanguageService);
   lastSkills = signal<Skills[]>(skills);
 
   constructor(private router: Router) {

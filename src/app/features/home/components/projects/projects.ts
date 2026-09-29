@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { CustomCarousel } from '@shared/components/custom-carousel/custom-carousel';
 import { Project, lastProjects } from '@shared/models/project';
+import { LanguageService } from '@shared/services/language.service';
 
 @Component({
   selector: 'app-projects',
@@ -10,6 +11,7 @@ import { Project, lastProjects } from '@shared/models/project';
   styleUrl: './projects.css',
 })
 export class Projects {
+  readonly language = inject(LanguageService);
   projects = signal<Project[]>(lastProjects);
 
   constructor(private router: Router) {

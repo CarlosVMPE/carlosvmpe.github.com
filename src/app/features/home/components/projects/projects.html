@@ -2,7 +2,7 @@
   <div class="portfolio workspace">
     <div class="top-section">
       <div class="projects-title">
-        <h1><span>Mis&nbsp;</span><span class="primary-color">trabajos&nbsp;</span>recientes</h1>
+        <h1><span>{{ language.t('projects.titleLead') }}&nbsp;</span><span class="primary-color">{{ language.t('projects.titleHighlight') }}&nbsp;</span>{{ language.t('projects.titleSuffix') }}</h1>
       </div>
     </div>
 
@@ -18,7 +18,7 @@
         <div class="project-options">
           <h5>{{project.name}}</h5>
           @if(project.link){
-          <a aria-label="Ver sitio web" [href]="project.link" target="_blank" rel="noreferrer noopener">
+          <a [attr.aria-label]="language.t('projects.viewSite')" [href]="project.link" target="_blank" rel="noreferrer noopener">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 640 640">
               <path d="M0 0h640v640H0z" fill="none" />
               <path fill="currentColor"
@@ -26,7 +26,7 @@
             </svg>
           </a>
           }
-          <a aria-label="Ver detalle del proyecto" [routerLink]="['/works', project.path]">
+          <a [attr.aria-label]="language.t('projects.viewDetails')" [routerLink]="['/works', project.path]">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
               <path d="M0 0h24v24H0z" fill="none" />
               <path fill="currentColor"

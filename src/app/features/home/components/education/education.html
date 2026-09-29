@@ -1,5 +1,5 @@
 <section class="education-section">
-  <h2 class="section-title">Educación</h2>
+  <h2 class="section-title">{{ language.t('education.title') }}</h2>
 
   <div class="timeline-container">
     @for (item of educationList; track item.title) {
@@ -7,7 +7,7 @@
 
       <div class="card">
         <div class="education-header">
-          <h3>{{ item.title }}</h3>
+          <h3>{{ language.t(item.title) }}</h3>
         </div>
 
         <!-- Bloque de sub-estudios -->
@@ -15,7 +15,7 @@
           @for (sub of item.subItems; track sub.institution; let last = $last) {
           <div class="sub-item" [class.with-divider]="!last">
             <h4 class="institution">{{ sub.institution }}</h4>
-            <span class="period">{{ sub.period }}</span>
+            <span class="period">{{ sub.period }} @if (sub.ongoing) { {{ language.t('education.present') }} }</span>
           </div>
           }
         </div>

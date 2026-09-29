@@ -8,12 +8,12 @@
     </div>
 
     <!-- Navegación -->
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="#home">Home</a>
-      <a href="#about">Sobre mí</a>
-      <a href="#projects">Proyectos</a>
-      <a href="#skills">Habilidades</a>
-      <a href="#contact">Contacto</a>
+    <nav class="footer-nav" [attr.aria-label]="language.t('footer.navigation')">
+      <a href="#home">{{ language.t('nav.home') }}</a>
+      <a href="#about">{{ language.t('nav.about') }}</a>
+      <a href="#projects">{{ language.t('nav.projects') }}</a>
+      <a href="#skills">{{ language.t('nav.skills') }}</a>
+      <a href="#contact">{{ language.t('nav.contact') }}</a>
     </nav>
 
     <!-- Redes -->
@@ -62,12 +62,12 @@
 
   <div class="footer-bottom">
     <p>
-      Diseñado y desarrollado por
+      {{ language.t('footer.designed') }}
       <span>Carlos</span>
     </p>
 
     <p>
-      © {{ year() }} Todos los derechos reservados.
+      © {{ year() }} {{ language.t('footer.rights') }}
     </p>
   </div>
 </footer>

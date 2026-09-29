@@ -60,30 +60,23 @@
     <div class="about-left-container">
       <div class="about-text-container">
         <div class="about-title">
-          <h1><span>Acerca de&nbsp;</span><span class="primary-color">mi</span></h1>
+          <h1><span>{{ language.t('about.titleLead') }}&nbsp;</span><span class="primary-color">{{ language.t('about.titleAccent') }}</span></h1>
         </div>
         <div class="about-subtitle">
-          <p>Soy Ingeniero de Software, trabajando como desarrollador Full Stack por más de {{experienceYears()}} años
-            en
-            distintos proyectos locales y extranjeros. Donde tuve la oportunidad de liderar equipos,
-            capacitar y compartir mis conocimientos.
-          </p>
+          <p>{{ language.t('about.description', { years: experienceYears() }) }}</p>
           <br>
-          <p>Me considero una persona responsable, creativo, orientado al logro de resultados, evolución
-            constante
-            personal y profesional. Soy muy curioso me gusta explorar e investigar nuevas alternativas
-            de soluciones, tengo capacidad de liderazgo y facilidad para trabajar en equipo.</p>
+          <p>{{ language.t('about.profile') }}</p>
           <br>
           <p class="read-more-botton">
-            <b>Mis intereses y hobbies son:</b>
+            <b>{{ language.t('about.interests') }}</b>
           </p>
           <ul class="leading-9">
-            <li>- Escuchar y tocar música con mi guitarra</li>
-            <li>- Jugar videojuegos en PC o movil</li>
-            <li>- Aprender nuevas tecnologías</li>
-            <li>- Jugar futbol</li>
-            <li>- Ir al gimnasio</li>
-            <li>- Pasar tiempo con mis mascotas</li>
+            <li>- {{ language.t('about.hobby.music') }}</li>
+            <li>- {{ language.t('about.hobby.gaming') }}</li>
+            <li>- {{ language.t('about.hobby.learning') }}</li>
+            <li>- {{ language.t('about.hobby.football') }}</li>
+            <li>- {{ language.t('about.hobby.gym') }}</li>
+            <li>- {{ language.t('about.hobby.pets') }}</li>
           </ul>
 
         </div>

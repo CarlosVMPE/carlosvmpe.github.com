@@ -2,11 +2,11 @@ import { Component, inject } from '@angular/core';
 import { LanguageService } from '@shared/services/language.service';
 
 @Component({
-  selector: 'app-welcome',
+  selector: 'app-toggle-language',
   imports: [],
-  templateUrl: './welcome.html',
-  styleUrl: './welcome.css',
+  templateUrl: './toggle-language.html',
+  styleUrl: './toggle-language.css',
 })
-export class Welcome {
+export class ToggleLanguage {
   language = inject(LanguageService);
 }
