@@ -14,6 +14,14 @@ export interface Work {
   tags?: string[];
 }
 
+export interface WorkTranslation {
+  project?: string;
+  description: string;
+  date: string;
+  type: string;
+  tags?: string[];
+}
+
 export type WorkNotFound = {
   codeError: string;
   title: string;

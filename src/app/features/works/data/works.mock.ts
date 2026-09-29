@@ -1,12 +1,12 @@
-import { Work } from "../models/work.model";
+import { Work, WorkTranslation } from "../models/work.model";
 
-export const WORKS_MOCK: Work[] = [
+export const WORKS_MOCK = [
   {
     id: 'dsg',
     brandColor: '#006554',
     companyName: "Dick's Sporting Goods",
     project: 'Web Checkout - List & Services UI',
-    description: "Dick's Sporting Goods, Inc. es una cadena estadounidense de tiendas de artículos deportivos, ropa atlética, calzado, accesorios para variedad de deportes y actividades al aire libre, como beísbol, fútbol, básquetbol, golf, etc.",
+    description: "Dick's Sporting Goods, es una cadena estadounidense de tiendas de artículos deportivos, ropa atlética, calzado, accesorios para variedad de deportes y actividades al aire libre, como beísbol, fútbol, básquetbol, golf, etc.",
     date: 'Actualidad',
     type: 'Retail - Ecommerce',
     navigationLeft: 'triptico-publicitario',
@@ -270,4 +270,100 @@ export const WORKS_MOCK: Work[] = [
       '/assets/projects/triptico/triptico3.jpg',
     ],
   },
-];
+ ] satisfies Work[];
+
+type WorkId = typeof WORKS_MOCK[number]['id'];
+
+export const WORKS_EN_TRANSLATIONS: Record<WorkId, WorkTranslation> = {
+  dsg: {
+    project: 'Web Checkout - List & Services UI',
+    description: "Dick's Sporting Goods, is an American sporting goods retailer offering athletic apparel, footwear, accessories, and equipment for a wide range of sports and outdoor activities, including baseball, soccer, basketball, and golf.",
+    date: 'Present',
+    type: 'Retail - Ecommerce',
+    tags: ['ecommerce', 'sales', 'sports', 'accessories', 'apparel', 'payments', 'sneakers', 'products', 'baseball', 'soccer', 'basketball', 'golf', 'orders', 'retail', 'promotions', 'discounts'],
+  },
+  'jm-family': {
+    project: 'Gyde Project - Insight Project',
+    description: 'Gyde (Guiding Your Dealership Experience) is a sales, financing, and insurance project for consumers and dealerships. It uses historical and credit data to provide customers and businesses with better evaluations when acquiring and improving products offered by JM Family.',
+    date: 'February 2026',
+    type: 'Automotive',
+    tags: ['automotive', 'sales', 'financing', 'insurance', 'products', 'vehicles', 'dealership', 'salesperson', 'reports', 'dashboard', 'quote'],
+  },
+  supervielle: {
+    project: 'Instant Transfers',
+    description: 'Banco Supervielle Online Banking for Businesses is an internal bank web application that lets businesses make individual or court-ordered transfers, processed instantly or within 24 to 48 hours.',
+    date: 'December 2024',
+    type: 'Banking / Mobile',
+    tags: ['banking', 'mobile', 'human resources', 'business', 'transfers', 'instant', 'bulk', 'court-ordered', '24/48 hours', 'contacts', 'online', 'banking'],
+  },
+  yape: {
+    project: 'Yape Web',
+    description: 'A mobile payments application that uses a phone number to make transactions with other users by phone number or QR code.',
+    date: 'September 2022',
+    type: 'Banking',
+    tags: ['banking', 'app', 'mobile', 'human resources', 'business', 'help center', 'Yape', 'FAQs'],
+  },
+  movistar: {
+    project: 'Movistar Total',
+    description: 'Movistar Total lets customers combine their Movistar products into one package, bringing home and mobile services together with added benefits and discounts.',
+    date: 'February 2021',
+    type: 'Telecommunications',
+    tags: ['home', 'mobile', 'internet', 'landline', 'TV', 'duo', 'trio', 'postpaid', 'offers', 'sales', 'promotions', 'discounts', 'bundles', 'customers'],
+  },
+  'taxi-lima': {
+    description: 'Taxi Lima provides fully formalized services, including car rentals, employee transportation, taxi rides, VIP services, light courier delivery, and automotive mechanics.',
+    date: 'February 2019',
+    type: 'Transportation',
+    tags: ['app', 'transportation', 'taxi', 'booking', 'trips'],
+  },
+  'kapital-taxi': {
+    description: 'Kapital Taxi specializes in passenger pick-up and transportation for corporate and executive clients.',
+    date: 'January 2019',
+    type: 'Transportation',
+    tags: ['app', 'transportation', 'taxi', 'courier', 'private hire', 'executive', 'booking', 'trips', 'scheduled service'],
+  },
+  'excel-travel': {
+    description: 'Excel Travel is a taxi company specializing in transportation for corporate personnel.',
+    date: 'January 2019',
+    type: 'Transportation',
+    tags: ['app', 'transportation', 'taxi', 'tours', 'courier', 'executive', 'booking', 'trips', 'scheduled service'],
+  },
+  'online-taxi': {
+    description: 'Online Taxi offers private-hire, corporate, courier, airport, and event transportation services.',
+    date: 'August 2018',
+    type: 'Transportation',
+    tags: ['app', 'transportation', 'taxi', 'private hire', 'courier', 'executive', 'airport', 'events', 'scheduled service'],
+  },
+  'taxi-pacifico': {
+    description: 'Taxi Pacífico is a taxi-rank transportation company established on September 1, 1999.',
+    date: 'July 2018',
+    type: 'Transportation',
+    tags: ['app', 'transportation', 'taxi', 'private hire', 'courier', 'executive', 'airport', 'events', 'scheduled service'],
+  },
+  'amigo-vip': {
+    description: 'Amigo VIP is a taxi company offering private-hire, executive, courier, and other transportation services.',
+    date: 'July 2018',
+    type: 'Transportation',
+    tags: ['app', 'transportation', 'taxi', 'private hire', 'courier', 'executive', 'airport', 'events', 'scheduled service'],
+  },
+  'tis-company': {
+    description: 'A company specializing in end-to-end corporate and institutional event planning, marketing, BTL, and nationwide staffing services.',
+    date: 'September 2018',
+    type: 'Events',
+    tags: ['events', 'corporate', 'institutional', 'marketing', 'social', 'general'],
+  },
+  'tarjeta-navidad': {
+    project: 'Christmas Card',
+    description: 'A Christmas card created to celebrate Christmas Eve.',
+    date: 'December 2018',
+    type: 'Transportation',
+    tags: ['card', 'Christmas', 'celebration', 'sharing', 'experiences', 'memories', 'animations', 'Christmas Eve'],
+  },
+  'triptico-publicitario': {
+    project: 'Promotional Brochure',
+    description: 'A promotional brochure created for Kapital Taxi.',
+    date: 'January 2019',
+    type: 'Transportation',
+    tags: ['brochure', 'banner', 'advertising', 'services', 'products', 'sales'],
+  },
+};

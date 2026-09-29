@@ -1,8 +1,8 @@
 <!-- Barra superior simulando la cabecera de la app -->
 <header class="top-bar m-0 p-0">
   <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
-    <span class="app-brand text-2xl">Sin resultados</span>
-    <span class="app-badge text-white/90">No encontrado</span>
+    <span class="app-brand text-2xl">{{ language.t('works.notFound.brand') }}</span>
+    <span class="app-badge text-white/90">{{ language.t('works.notFound.badge') }}</span>
   </div>
 </header>
 
@@ -12,14 +12,14 @@
   <section class="content-left">
     <div class="text-block">
       <span class="error-code">404</span>
-      <h1>{{ notFound().title }}</h1>
-      <p>{{ notFound().description }}</p>
+      <h1>{{ language.t('works.notFound.title') }}</h1>
+      <p>{{ language.t('works.notFound.description') }}</p>
 
       <div class="tags-container">
         <span class="tag">error</span>
-        <span class="tag">desconocido</span>
-        <span class="tag">recurso</span>
-        <span class="tag">vacío</span>
+        <span class="tag">{{ language.t('works.notFound.unknown') }}</span>
+        <span class="tag">{{ language.t('works.notFound.resource') }}</span>
+        <span class="tag">{{ language.t('works.notFound.empty') }}</span>
       </div>
     </div>
 
@@ -31,7 +31,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
-        <p class="illustration-text">No se encontraron registros en este enlace</p>
+        <p class="illustration-text">{{ language.t('works.notFound.noRecords') }}</p>
       </section>
     </app-mockup-card>
   </section>
@@ -40,7 +40,7 @@
   <aside class="content-right sheet">
     <!-- Botón de acción principal -->
     <a routerLink="/" class="action-button">
-      Volver al inicio
+      {{ language.t('works.backHome') }}
       <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
       </svg>
@@ -48,16 +48,16 @@
 
     <div class="meta-list">
       <div class="meta-item">
-        <span class="meta-label">Estado</span>
-        <span class="meta-value text-accent">No disponible</span>
+        <span class="meta-label">{{ language.t('works.notFound.status') }}</span>
+        <span class="meta-value text-accent">{{ language.t('works.notFound.unavailable') }}</span>
       </div>
       <div class="meta-item">
-        <span class="meta-label">Código</span>
+        <span class="meta-label">{{ language.t('works.notFound.code') }}</span>
         <span class="meta-value">HTTP 404</span>
       </div>
       <div class="meta-item">
-        <span class="meta-label">Categoría</span>
-        <span class="meta-value">Navegación</span>
+        <span class="meta-label">{{ language.t('works.category') }}</span>
+        <span class="meta-value">{{ language.t('works.notFound.category') }}</span>
       </div>
     </div>
   </aside>

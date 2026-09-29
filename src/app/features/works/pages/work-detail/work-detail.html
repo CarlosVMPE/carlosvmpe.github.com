@@ -2,7 +2,7 @@
 <div class="w-screen h-screen flex justify-center">
   <span class="loading loading-spinner text-secondary"></span>
 </div>
-} @else if (workResource.value(); as work) {
+} @else if (localizedWork(); as work) {
 
 <section class="work-container">
 
@@ -18,7 +18,7 @@
         </svg>
 
         <a class="capitalize hover:opacity-75 text-xl">
-          Inicio
+          {{ language.t('works.home') }}
         </a>
       </a>
       <span class="text-lg text-white/90 hidden sm:block">{{ work.type }}</span>
@@ -35,7 +35,7 @@
           d="m2 11l7-9v5c11.953 0 13.332 9.678 13 15c-.502-2.685-.735-7-13-7v5z" />
       </svg>
       <a class="pager-link">
-        Volver al inicio
+        {{ language.t('works.backHome') }}
       </a>
     </a>
 
@@ -55,7 +55,7 @@
       <ng-template #projectTemplate let-project>
         <article class="">
           <figure class="w-full h-full lg:h-110 pointer-events-none">
-            <img class="w-full h-full" [src]="project" [alt]="project" />
+            <img class="w-full h-full" [src]="project" [alt]="work.project || work.companyName" />
           </figure>
         </article>
       </ng-template>
@@ -73,7 +73,7 @@
     <aside class="sheet">
       <a [href]="work.link" target="_blank" class="btn-visit" [ngStyle]="{'background-color': work.brandColor}"
         [ngClass]="!work.link ? 'pointer-events-none opacity-50 cursor-not-allowed' : ''">
-        Visitar sitio
+        {{ language.t('works.visitSite') }}
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
           stroke-linecap="round" stroke-linejoin="round">
           <path d="M7 17L17 7M17 7H8M17 7v9"></path>
@@ -82,15 +82,15 @@
 
       <dl class="mt-6">
         <div class="meta-row">
-          <dt>Cliente</dt>
+          <dt>{{ language.t('works.client') }}</dt>
           <dd>{{work.companyName}}</dd>
         </div>
         <div class="meta-row">
-          <dt>Fecha</dt>
+          <dt>{{ language.t('works.date') }}</dt>
           <dd>{{work.date}}</dd>
         </div>
         <div class="meta-row">
-          <dt>Categoría</dt>
+          <dt>{{ language.t('works.category') }}</dt>
           <dd>{{work.type}}</dd>
         </div>
       </dl>
@@ -104,8 +104,8 @@
           <path d="M15 18l-6-6 6-6"></path>
         </svg>
         <a class="capitalize pager-link" [routerLink]="['/works', work.navigationLeft]">
-          <span class="pager-kicker">Anterior</span>
-          {{work.navigationLeft.replaceAll("-", ' ')}}
+          <span class="pager-kicker">{{ language.t('works.previous') }}</span>
+          {{ navigationWorkName(work.navigationLeft) }}
         </a>
       </a>
 
@@ -117,15 +117,15 @@
         </svg>
 
         <a class="capitalize pager-link">
-          <span class="pager-kicker">Regresar</span>
-          Inicio
+          <span class="pager-kicker">{{ language.t('works.return') }}</span>
+          {{ language.t('works.home') }}
         </a>
       </a>
 
       <a href="#" class="flex items-center gap-3 text-right">
         <a class="capitalize pager-link" [routerLink]="['/works', work.navigationRight]">
-          <span class="pager-kicker">Siguiente</span>
-          {{work.navigationRight.replaceAll("-", ' ')}}
+          <span class="pager-kicker">{{ language.t('works.next') }}</span>
+          {{ navigationWorkName(work.navigationRight) }}
         </a>
 
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
