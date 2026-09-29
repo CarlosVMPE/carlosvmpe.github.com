@@ -11,6 +11,7 @@ import { WorkNotFoundComponent } from '../work-not-found/work-not-found';
 import { MockupCardComponent } from '@shared/components/mockup-card/mockup-card';
 import { LanguageService } from '@shared/services/language.service';
 import { WORKS_EN_TRANSLATIONS, WORKS_MOCK } from '../../data/works.mock';
+import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.directive';
 
 
 @Component({
@@ -19,7 +20,7 @@ import { WORKS_EN_TRANSLATIONS, WORKS_MOCK } from '../../data/works.mock';
   imports: [
     NgStyle, RouterLink, NgClass,
     CustomCarousel, WorkNotFoundComponent,
-    MockupCardComponent
+    MockupCardComponent, RevealOnScrollDirective
   ],
   templateUrl: './work-detail.html',
   styleUrl: './work-detail.css'
