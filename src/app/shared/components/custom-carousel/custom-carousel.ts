@@ -613,6 +613,8 @@ export class CustomCarousel<T> implements AfterViewInit, OnChanges, OnDestroy {
       return;
     }
 
+    this.stopAutoplay();
+
     const target = event.target as HTMLElement;
 
     // No iniciar drag sobre elementos interactivos
@@ -629,8 +631,6 @@ export class CustomCarousel<T> implements AfterViewInit, OnChanges, OnDestroy {
     this.startX = event.clientX;
 
     this.dragX.set(0);
-
-    this.stopAutoplay();
 
     this.viewport.nativeElement
       .setPointerCapture(
@@ -672,6 +672,7 @@ export class CustomCarousel<T> implements AfterViewInit, OnChanges, OnDestroy {
   ): void {
 
     if (!this.isDragging()) {
+      this.startAutoplay();
       return;
     }
 
@@ -729,6 +730,7 @@ export class CustomCarousel<T> implements AfterViewInit, OnChanges, OnDestroy {
   ): void {
 
     if (!this.isDragging()) {
+      this.startAutoplay();
       return;
     }
 
