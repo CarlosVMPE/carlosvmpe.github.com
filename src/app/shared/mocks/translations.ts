@@ -165,7 +165,7 @@ export const ENGLISH_EXPERIENCES: ExperienceItem[] = [
   {
     company: 'Globant', color: 'cyan', role: 'Web UI Developer SSr. Adv.', projects: [
       {
-        role: "Dick's Sporting Goods (DSG) - USA", period: 'March 2026 - Present', points: [
+        role: "Dick's Sporting Goods (DSG) - USA", period: 'March 2026 - October 2026', points: [
           'Developing new features for projects built with Angular 22+.',
           'Using Signals and modern Angular patterns in NPX monorepos.',
           'Applying linters and source-code best practices with SonarQube.',

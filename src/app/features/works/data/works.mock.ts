@@ -7,7 +7,7 @@ export const WORKS_MOCK = [
     companyName: "Dick's Sporting Goods",
     project: 'Web Checkout - List & Services UI',
     description: "Dick's Sporting Goods, es una cadena estadounidense de tiendas de artículos deportivos, ropa atlética, calzado, accesorios para variedad de deportes y actividades al aire libre, como beísbol, fútbol, básquetbol, golf, etc.",
-    date: 'Actualidad',
+    date: 'Octubre 2026',
     type: 'Retail - Ecommerce',
     navigationLeft: 'triptico-publicitario',
     navigationRight: 'jm-family',
@@ -278,7 +278,7 @@ export const WORKS_EN_TRANSLATIONS: Record<WorkId, WorkTranslation> = {
   dsg: {
     project: 'Web Checkout - List & Services UI',
     description: "Dick's Sporting Goods, is an American sporting goods retailer offering athletic apparel, footwear, accessories, and equipment for a wide range of sports and outdoor activities, including baseball, soccer, basketball, and golf.",
-    date: 'Present',
+    date: 'October 2026',
     type: 'Retail - Ecommerce',
     tags: ['ecommerce', 'sales', 'sports', 'accessories', 'apparel', 'payments', 'sneakers', 'products', 'baseball', 'soccer', 'basketball', 'golf', 'orders', 'retail', 'promotions', 'discounts'],
   },

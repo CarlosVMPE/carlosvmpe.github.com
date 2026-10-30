@@ -20,7 +20,7 @@ export const allExperiences: ExperienceItem[] = [
     projects: [
       {
         role: "Dick's Sporting Goods (DSG) - USA",
-        period: 'Marzo 2026 - Actualidad',
+        period: 'Marzo 2026 - Octubre 2026',
         points: [
           'Desarrollo de nuevas funcionalidades para distintos proyectos basados en Angular 22+.',
           'Uso de Signals y nuevo paradigma en Angular moderno y monorepos con NPX.',
