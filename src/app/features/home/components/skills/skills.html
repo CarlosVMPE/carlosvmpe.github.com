@@ -5,23 +5,28 @@
       <span class="primary-color">{{ language.t('skills.technical') }}</span>
     </h1>
 
-    <ng-template #projectTemplate let-skill>
-      <article class="card-skill">
-        <figure class="p-5">
-          <img class="pointer-events-none" [src]="skill.image"
-            [alt]="skill.name" [title]="skill.name" />
-        </figure>
-      </article>
-
-    </ng-template>
-
-    <app-custom-carousel [items]="lastSkills()" [itemTemplate]="projectTemplate" [visibleItems]="5"
-      [itemsInMediumDevices]="4"
-      [loop]="true" [autoplay]="true" [autoplayInterval]="2000" [showPagination]="false" />
+    <div class="skill-groups">
+      @for (group of skillGroups; track group.titleKey) {
+      <section class="skill-group">
+        <h2 class="my-5 text-xl sm:text-2xl font-semibold">{{ language.t(group.titleKey) }}</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4">
+          @for (skill of group.skills; track skill.name) {
+          <article class="card card-compact bg-base-100 border border-base-300 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md">
+            <div class="card-body flex-row items-center gap-3 p-3 sm:p-4">
+              <img class="h-9 w-9 shrink-0 object-contain sm:h-11 sm:w-11" [src]="skill.image"
+                [alt]="skill.name" [title]="skill.name" loading="lazy" />
+              <span class="text-sm font-medium leading-tight sm:text-base">{{ skill.name }}</span>
+            </div>
+          </article>
+          }
+        </div>
+      </section>
+      }
+    </div>
   </section>
 
   <section class="soft-skills">
-    <h1 class="flex gap-2 text-2xl sm:text-5xl" [ngClass]="language.current() == 'en' ? 'flex-row-reverse justify-end' : ''"
+    <h1 class="text-2xl sm:text-5xl" [ngClass]="language.current() == 'en' ? 'flex-row-reverse justify-end' : ''"
     ><span>{{ language.t('skills.titleLead') }} </span><span class="primary-color">{{ language.t('skills.soft') }}</span></h1>
     <ul>
       <li>

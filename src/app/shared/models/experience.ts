@@ -16,93 +16,83 @@ export const allExperiences: ExperienceItem[] = [
   {
     company: 'Globant',
     color: 'cyan',
-    role: 'Web UI Developer SSr. Adv.',
+    role: 'Web UI / Full-Stack Developer Ssr. Adv.',
     projects: [
       {
         role: "Dick's Sporting Goods (DSG) - USA",
         period: 'Marzo 2026 - Octubre 2026',
         points: [
-          'Desarrollo de nuevas funcionalidades para distintos proyectos basados en Angular 22+.',
-          'Uso de Signals y nuevo paradigma en Angular moderno y monorepos con NPX.',
-          'Uso de linters y buenas prácticas de código fuente junto con SonnarQube.',
-          'Métricas de software con Copilot durante la entrega de PRs a Github.',
-          'Pruebas unitarias en Angular 22+.',
-          'Construcción de nueva UI basadas en Figma.',
-          'Uso de Docker, Github y Github Actions.',
-          'SCRUM y Jira para el seguimiento de tareas diarias.'
+          'Desarrollé funcionalidades para Account, Cart, List y Services en Angular 22, usando Signals, Signal Forms y rxResource.',
+          'Participé en la migración de Angular 21 a Angular 22, preservando los flujos críticos de Checkout.',
+          'Diseñé y desarrollé APIs REST con NestJS y Clean Architecture, usando DTOs, class-validator, JWT, Passport, PostgreSQL y TypeORM.',
+          'Integré herramientas de IA en el flujo de desarrollo y trabajé con SonarQube, Vitest, Playwright, Docker, AWS, GitHub Actions y Swagger.'
         ]
       },
       {
         role: 'JM Family Enterprises (JMF) - Insight Project - USA',
         period: 'Enero 2025 - Febrero 2026',
         points: [
-          'Desarrollo de nuevas funcionalidades dentro del proyecto Gyde Insight en C# con Blazor',
-          'Desarrollo basado en Figma, MudBlazor, HTML5, CSS3 y Javascript junto con Copilot AI.',
-          'Participación en demos para mostrar nuevos desarrollos a otros equipos y personas del negocio.',
-          'Pruebas unitarias en C#.',
-          'Despliegue de aplicaciones en los distintos entornos.',
-          'SCRUM y Jira para el seguimiento de tareas diarias.'
+          'Desarrollé interfaces con C#, .NET 8, Blazor y MudBlazor a partir de diseños en Figma.',
+          'Desarrollé APIs REST con .NET 8, DTOs, reglas de negocio, autenticación y manejo centralizado de errores.',
+          'Consulté datos con Entity Framework Core y SQL Server, y escribí pruebas unitarias.',
+          'Usé GitHub Copilot como apoyo para el desarrollo; colaboré en despliegues a AWS y presenté demos a equipos y stakeholders.'
         ]
       },
       {
         role: 'Banco Supervielle - Argentina',
         period: 'Octubre 2022 - Diciembre 2024',
         points: [
-          'Desarrollo de nuevas funcionalidades a los distintos Microfrontends, Transferencias Inmediatas, Masivas, Agenda, BackOffice.',
-          'Mejora de soluciones al proyecto usando HTML5, Scss, TypeScript y Angular 12+ y 16+.',
-          'Nuevas interfaces UI basadas en Figma.',
-          'Pruebas unitarias con Jasmine y de integración con Cypress.',
-          'Despliegue de aplicaciones con pipelines y rundeck.',
-          'Uso de biblioteca de componentes interna llamada Kite.'
+          'Desarrollé funcionalidades para Transferencias Inmediatas, Transferencias Masivas, Agenda y Back Office.',
+          'Trabajé con microfrontends Angular 16 y React 17 sobre Webpack y Module Federation; participé en migraciones de Angular 12 a 13 y 16.',
+          'Implementé pruebas con Jasmine y Cypress, usé la librería Kite y participé en despliegues con pipelines y Rundeck.'
         ]
       },
       {
         role: 'Yape Web - Banco de Credito del Perú - BCP',
         period: 'Febrero 2021 — Septiembre 2022',
         points: [
-          'Desarrollo de nuevas funcionalidades, interfaces en Figma, mejora de soluciones al proyecto usando HTML5, Scss, TypeScript y Angular 9.',
-          'Mejora de optimización de carga, performance, accesibilidad, buenas prácticas y SEO.',
-          'Buenas prácticas siguiendo recomendaciones con SonarQube y Confluence.',
-          'Deploy de aplicaciones con Blob Storage de Azure y Pipelines con Jenkins.',
-          'Integración de servicios y contenido con DatoCMS (Content Manager Service).',
-          'Implementación de pruebas unitarias hacia el 97% de coverage.',
-          'Desarrollo de estructura multi-idioma y soporte para traducción a Quechua con Squoia (VM).',
-          'Documentación en Confluente, participación en ceremonias SCRUM.'
+          'Desarrollé funcionalidades web con Angular 9, TypeScript y SCSS e integré servicios y contenido mediante DatoCMS.',
+          'Mejoré rendimiento de carga, accesibilidad y SEO; implementé soporte multidioma, incluida la traducción al quechua con Squoia.',
+          'Alcancé más de 90 % de cobertura en pruebas unitarias y participé en despliegues a Azure Blob Storage con Jenkins, siguiendo prácticas de calidad con SonarQube.'
         ]
       }
     ]
   },
   {
     company: 'VASS LATAM',
-    role: 'Analista Programador Front End',
+    role: 'Analista Programador / Desarrollador Full-Stack',
     color: 'blue',
     projects: [
       {
         period: 'Junio 2019 — Febrero 2021',
         points: [
-          'Desarrollador líder Front-End en el squad Oferta Comercial y Front-End Transversal para la Tribu Stark de Telefónica.',
-          'Supervisión, capacitación y acompañamiento para el squad Front-End.',
-          'Desarrollo de componentes con Angular 6+ y 8+, en conjunto con TypeScript, Sass, etc.',
-          'Experiencia trabajando con repositorios Git y estrategia de ramas (branches) como GitFlow.',
-          'Desarrollo e implementación de Pruebas Unitarias (Unit Testing) con Karma y Jasmine.',
-          'Despliegue de aplicaciones en Cloud Foundry utilizando Pipelines (DevOps) de IBM Cloud.',
-          'Trabajo con metodología ágil SCRUM y Jira.'
+          'Lideré el desarrollo frontend de los squads Oferta Comercial y Front-End Transversal para la tribu Stark de Telefónica; supervisé y capacité al equipo.',
+          'Desarrollé componentes con Angular y participé en la evolución de Angular 6 a Angular 8.',
+          'Desarrollé APIs REST con Java y Spring Boot, usando DTOs, reglas de negocio y manejo centralizado de errores.',
+          'Implementé pruebas con Karma y Jasmine y participé en despliegues a IBM Cloud Foundry mediante pipelines de DevOps.'
         ]
       }
     ]
   },
   {
     company: 'Nelica S.A.C',
-    role: 'Programador Front End',
+    role: 'Programador Full-Stack / Responsable de Sistemas',
     color: 'cyan',
     projects: [
       {
+        role: 'Valquiria Joyería y Platería',
+        period: 'Enero 2019 — Febrero 2019',
+        points: [
+          'Desarrollé el sitio web y e-commerce de Valquiria durante mi etapa en Nelica.',
+          'Organicé el catálogo en categorías de joyería, platería, decoración y merchandising.'
+        ]
+      },
+      {
         period: 'Abril 2018 — Febrero 2019',
         points: [
-          'Desarrollo de páginas web, usando HTML5, CSS3, Javascript y el framework Boostrap 4.',
-          'Desarrollo de Intranets para empresas del sector transporte, usando ASP.NET junto al API de Google Maps.',
-          'Responsable del área de sistemas, supervisión del desarrollo de las páginas web.',
-          'Trabajo en equipo con el área de diseño y marketing para los nuevos desarrollos.'
+          'Desarrollé páginas web con HTML5, CSS3, JavaScript, jQuery y Bootstrap 4.',
+          'Desarrollé intranets para empresas de transporte con ASP.NET e integración de Google Maps.',
+          'Estuve a cargo del área de sistemas, supervisé el desarrollo web y colaboré con diseño y marketing.'
         ]
       }
     ]

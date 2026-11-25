@@ -72,31 +72,48 @@
 
   z-index: 10;
 
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
 
   border: none;
   border-radius: 50%;
+  padding: 0;
 
   background: rgb(0 0 0 / 50%);
   color: white;
 
-  font-size: 32px;
-  line-height: 1;
+  font-size: 0;
+  line-height: 0;
 
   cursor: pointer;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 
   transition:
     background 200ms ease,
     transform 200ms ease;
 }
 
+.carousel__button svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .carousel__button:hover {
   background: rgb(0 0 0 / 75%);
+}
+
+.carousel__button:focus-visible,
+.carousel__dot:focus-visible {
+  outline: 3px solid #00adb5;
+  outline-offset: 3px;
 }
 
 .carousel__button--prev {
@@ -133,28 +150,49 @@
 }
 
 .carousel__dot {
-  width: 9px;
-  height: 9px;
-
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 32px;
   padding: 0;
 
   border: none;
   border-radius: 999px;
 
-  background: white;
-
-  opacity: 0.9;
+  background: transparent;
 
   cursor: pointer;
 
   transition:
-    width 250ms ease,
-    opacity 250ms ease,
-    background 250ms ease;
+    opacity 250ms ease;
 }
 
-.carousel__dot--active {
+.carousel__dot::before {
+  content: '';
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: white;
+  opacity: 0.9;
+  transition: width 250ms ease, background 250ms ease;
+}
+
+.carousel__dot--active::before {
   background: #00adb5;
   opacity: 1;
   width: 34px;
+}
+
+@media (max-width: 640px) {
+  .carousel__button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .carousel__pagination {
+    gap: 2px;
+    flex-wrap: wrap;
+    padding: 0 12px;
+  }
 }

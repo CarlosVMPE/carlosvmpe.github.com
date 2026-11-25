@@ -51,7 +51,9 @@ export class Navbar {
   }
 
   private updateActiveSection(): void {
-    const sections = document.querySelectorAll<HTMLElement>('section');
+    const sections = document.querySelectorAll<HTMLElement>(
+      'section#home, section#about, section#projects, section#skills, section#experience, section#contact'
+    );
 
     let currentSection = '';
 

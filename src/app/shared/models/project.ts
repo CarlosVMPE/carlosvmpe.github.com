@@ -37,6 +37,11 @@ export const lastProjects: Project[] = [
     path: 'movistar'
   },
   {
+    name: 'Valquiria Joyería',
+    image: '/assets/projects/valquiria/valquiria-logo.png',
+    path: 'valquiria'
+  },
+  {
     name: 'Taxi Lima',
     image: '/assets/projects/tlima.jpg',
     link: 'https://www.taxilima.com.pe/',

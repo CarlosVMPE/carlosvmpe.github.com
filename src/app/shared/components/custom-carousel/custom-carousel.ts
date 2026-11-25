@@ -154,6 +154,15 @@ export class CustomCarousel<T> implements AfterViewInit, OnChanges, OnDestroy {
 
   }
 
+  /** Cloned slides are visual loop helpers and must not enter the a11y/tab order. */
+  isClone(renderedIndex: number): boolean {
+    if (!this.loop() || this.totalItems === 0) {
+      return false;
+    }
+
+    return renderedIndex < this.cloneCount || renderedIndex >= this.cloneCount + this.totalItems;
+  }
+
 
   // =====================================================
   // INDEX

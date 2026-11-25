@@ -12,6 +12,12 @@ export interface Work {
 
   brandColor?: string;
   tags?: string[];
+  sections?: WorkSection[];
+}
+
+export interface WorkSection {
+  title: string;
+  items: string[];
 }
 
 export interface WorkTranslation {
@@ -20,6 +26,7 @@ export interface WorkTranslation {
   date: string;
   type: string;
   tags?: string[];
+  sections?: WorkSection[];
 }
 
 export type WorkNotFound = {

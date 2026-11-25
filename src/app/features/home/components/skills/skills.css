@@ -55,10 +55,6 @@
   .soft-skills ul {
     grid-template-columns: 1fr 1fr;
   }
-
-  #skills h1 span {
-    display: block;
-  }
 }
 
 @media (max-width: 480px) {

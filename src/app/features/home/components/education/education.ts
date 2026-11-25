@@ -40,13 +40,8 @@ export class EducationComponent {
       title: 'education.english',
       subItems: [
         {
-          institution: 'Portal Go Fluent (Globant) & Duolingo',
-          period: '2024 -',
-          ongoing: true
-        },
-        {
-          institution: 'Instituto de Inglés de la UTP',
-          period: '2014 - 2015'
+          institution: 'Portal GoFluent (Globant)',
+          period: '2026'
         }
       ],
       colorClass: 'color-blue',

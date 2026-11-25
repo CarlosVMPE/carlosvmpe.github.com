@@ -34,7 +34,7 @@
 
 /* Card portfolio */
 .card-project {
-  width: 90%;
+  /* width: 90%; */
   margin: auto;
   position: relative;
   color: var(--background);

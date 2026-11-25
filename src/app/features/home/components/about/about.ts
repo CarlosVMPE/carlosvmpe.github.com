@@ -9,5 +9,20 @@ import { LanguageService } from '@shared/services/language.service';
 })
 export class About {
   readonly language = inject(LanguageService);
-  experienceYears = computed(() => new Date().getFullYear() - 2018)
+  experienceYears = computed(() => {
+    const startDate = new Date(2018, 3, 1);
+    const today = new Date();
+
+    let years = today.getFullYear() - startDate.getFullYear();
+    const anniversaryHasNotPassed =
+      today.getMonth() < startDate.getMonth() ||
+      (today.getMonth() === startDate.getMonth() &&
+        today.getDate() < startDate.getDate());
+
+    if (anniversaryHasNotPassed) {
+      years--;
+    }
+
+    return years;
+  });
 }

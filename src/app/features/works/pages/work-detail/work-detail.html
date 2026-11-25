@@ -46,11 +46,6 @@
 
       <p>{{ work.description }}</p>
 
-      <div class="flex flex-wrap gap-2 mt-6">
-        @for(tag of work.tags; track tag){
-        <span class="tag">{{tag}}</span>
-        }
-      </div>
 
       <ng-template #projectTemplate let-project>
         <article class="">
@@ -68,10 +63,24 @@
           </section>
         </app-mockup-card>
       </section>
+
+      <div class="work-sections">
+        @for (section of work.sections; track section.title) {
+        <section class="work-section">
+          <h2>{{ section.title }}</h2>
+          <ul>
+            @for (item of section.items; track item) {
+            <li>{{ item }}</li>
+            }
+          </ul>
+        </section>
+        }
+      </div>
     </div>
 
     <aside class="sheet" [appRevealOnScroll]="work.id">
-      <a [href]="work.link" target="_blank" class="btn-visit" [ngStyle]="{'background-color': work.brandColor}"
+      <a [attr.href]="work.link || null" target="_blank" class="btn-visit" [ngStyle]="{'background-color': work.brandColor}"
+        [attr.aria-disabled]="!work.link"
         [ngClass]="!work.link ? 'pointer-events-none opacity-50 cursor-not-allowed' : ''">
         {{ language.t('works.visitSite') }}
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
@@ -94,6 +103,12 @@
           <dd>{{work.type}}</dd>
         </div>
       </dl>
+
+      <div class="flex flex-wrap gap-2 mt-6">
+        @for(tag of work.tags; track tag){
+        <span class="tag">{{tag}}</span>
+        }
+      </div>
     </aside>
 
   </main>

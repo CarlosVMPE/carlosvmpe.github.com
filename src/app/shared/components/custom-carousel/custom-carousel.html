@@ -1,4 +1,4 @@
-<div class="carousel"
+<div class="carousel" role="region" aria-roledescription="carousel" aria-label="Carrusel de elementos"
   (mouseenter)="onMouseEnter()"
   (mouseleave)="onMouseLeave()"
 
@@ -44,6 +44,8 @@
         <div
           class="carousel__slide"
           [ngClass]="{'carousel__slide-no-spacing': !navigation()}"
+          [attr.aria-hidden]="isClone($index) ? 'true' : null"
+          [attr.inert]="isClone($index) ? '' : null"
           [style.width]="slideWidth"
         >
 
@@ -65,37 +67,39 @@
 
   <!-- PREVIOUS -->
 
-  @if(navigation()){
-    @if (canGoPrevious) {
+  @if(navigation() && totalItems > currentVisibleItems){
 
     <button
       type="button"
       class="carousel__button carousel__button--prev"
       (click)="previous()"
       aria-label="Anterior"
+      title="Anterior"
     >
-      ‹
+      <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+        <path d="m15 18-6-6 6-6" />
+      </svg>
     </button>
 
-  }
   }
 
 
   <!-- NEXT -->
 
-  @if(navigation()){
-    @if (canGoNext) {
+  @if(navigation() && totalItems > currentVisibleItems){
 
     <button
       type="button"
       class="carousel__button carousel__button--next"
       (click)="next()"
       aria-label="Siguiente"
+      title="Siguiente"
     >
-      ›
+      <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+        <path d="m9 18 6-6-6-6" />
+      </svg>
     </button>
 
-  }
   }
 
 

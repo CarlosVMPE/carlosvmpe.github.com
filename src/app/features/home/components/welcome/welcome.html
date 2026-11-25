@@ -19,12 +19,12 @@
           <a href="#projects" class="w-full sm:w-auto">
             <button class="primary-button w-full"><span>{{ language.t('home.projects') }}</span></button>
           </a>
-          <a
-          [href]="language.current() == 'es' ? '/assets/CV_Carlos_Vilchez_Malasquez.pdf': '/assets/CV_Carlos_Vilchez_Malasquez_EN.pdf'"
-          target="_blank" class="w-full sm:w-auto">
+          <a [href]="language.current() === 'es'
+              ? '/assets/CV_Carlos_VM.pdf'
+              : '/assets/CV_EN_Carlos_VM.pdf'" target="_blank" class="w-full sm:w-auto">
             <button class="secondary-button w-full">
-              <span>{{ language.t('home.cv') }}</span><svg class="w-5 h-5" viewBox="0 0 20 21"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+              <span>{{ language.t('home.cv') }}</span><svg class="w-5 h-5" viewBox="0 0 20 21" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M19 13.5V17.5C19 18.0304 18.7893 18.5391 18.4142 18.9142C18.0391 19.2893 17.5304 19.5 17 19.5H3C2.46957 19.5 1.96086 19.2893 1.58579 18.9142C1.21071 18.5391 1 18.0304 1 17.5V13.5"
                   stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -39,8 +39,7 @@
       </div>
     </div>
     <div class="hero-image">
-      <svg width="570" height="570" viewBox="0 0 570 570" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
+      <svg width="570" height="570" viewBox="0 0 570 570" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="175" cy="555" rx="174" ry="12" fill="black" fill-opacity="0.5"></ellipse>
         <path
           d="M183.686 414.091C182.377 414.284 180.837 414.386 180.525 415.945C180.284 417.153 180.375 418.396 181.099 419.444C182.336 421.234 184.174 422.279 186.388 421.91C188.367 421.581 191.086 419.787 191.086 417.559C191.086 416.303 190.181 415.039 189.433 414.099C188.631 413.092 187.938 412.032 186.928 411.208C185.566 410.097 184.465 409.988 183.24 411.298C182.57 412.015 181.936 412.993 181.643 413.932C181.498 414.395 181.605 414.766 181.605 415.23C181.605 415.848 181.49 414.936 181.605 414.63"
@@ -685,6 +684,7 @@
         <path
           d="M196.293 348.51L200.578 351.573L178.038 388.645L171.148 383.734C160.007 375.792 158.94 359.633 168.941 350.296C176.471 343.266 187.913 342.519 196.293 348.51Z"
           fill="#F5B9AB" stroke="black" stroke-width="1.39887" stroke-linejoin="round"></path>
-      </svg></div>
+      </svg>
+    </div>
   </div>
 </section>
