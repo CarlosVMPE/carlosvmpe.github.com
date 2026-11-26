@@ -42,7 +42,7 @@ export const translations = {
     'about.titleLead': 'Acerca de',
     'about.titleAccent': 'mi',
     'about.description': 'Soy Ingeniero de Software y Desarrollador Full Stack Senior con {years}+ años de experiencia en productos de banca, retail, automotriz y telecomunicaciones. He liderado equipos, acompañado a otros desarrolladores y entregado soluciones para proyectos locales e internacionales.',
-    'about.profile': 'Me considero una persona responsable, creativa y orientada al logro de resultados, con una evolución personal y profesional constante. Soy muy curiosa; me gusta explorar e investigar nuevas alternativas de solución. Tengo capacidad de liderazgo y facilidad para trabajar en equipo.',
+    'about.profile': 'Me considero una persona responsable, creativa y orientada al logro de resultados, con una evolución personal y profesional constante. Soy muy curioso; me gusta explorar e investigar nuevas alternativas de solución. Tengo capacidad de liderazgo y facilidad para trabajar en equipo.',
     'about.interests': 'Mis intereses y hobbies son:',
     'about.hobby.music': 'Escuchar y tocar música con mi guitarra',
     'about.hobby.gaming': 'Jugar videojuegos en PC o móvil',
