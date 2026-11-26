@@ -33,7 +33,7 @@
         'px, 0, 0)'
       "
 
-      (transitionend)="onTransitionEnd()"
+      (transitionend)="onTransitionEnd($event)"
     >
 
       @for (
@@ -44,8 +44,8 @@
         <div
           class="carousel__slide"
           [ngClass]="{'carousel__slide-no-spacing': !navigation()}"
-          [attr.aria-hidden]="isClone($index) ? 'true' : null"
-          [attr.inert]="isClone($index) ? '' : null"
+          [attr.aria-hidden]="isInactiveClone($index) ? 'true' : null"
+          [attr.inert]="isInactiveClone($index) ? '' : null"
           [style.width]="slideWidth"
         >
 

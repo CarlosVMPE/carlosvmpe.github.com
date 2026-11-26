@@ -34,43 +34,150 @@
 
 /* Card portfolio */
 .card-project {
-  /* width: 90%; */
   margin: auto;
   position: relative;
   color: var(--background);
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 10%);
+  transition: transform 240ms cubic-bezier(0.2, 0.75, 0.25, 1), box-shadow 240ms ease, filter 240ms ease;
+}
+
+.card-project:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgb(0 0 0 / 28%);
+  filter: saturate(1.04);
+}
+
+.project-image {
+  min-height: 9rem;
+  overflow: hidden;
+}
+
+.project-image img {
+  max-width: 100%;
+  max-height: 14rem;
+  object-fit: contain;
+  transition: transform 360ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.card-project:hover .project-image img {
+  transform: scale(1.035);
 }
 
 .project-options {
   background: white;
   position: relative;
-  text-align: right;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  gap: 10px;
-  border: 5px solid;
-  border-image-slice: 1;
-  border-top-width: 5px;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-right-width: 0;
-  border-image-source: linear-gradient(to left, oklch(59.6% 0.145 163.225), oklch(67.3% 0.182 276.935));
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.8rem;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to left, oklch(59.6% 0.145 163.225), oklch(67.3% 0.182 276.935)) 1;
 }
 
 .project-options h5 {
-  display: flex;
-  flex: auto;
+  display: -webkit-box;
+  min-width: 0;
+  min-height: 2.7rem;
   margin: 0;
-  text-align: left;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.25;
+  font-weight: 700;
 }
 
-.project-options a {
-  color: var(--background);
+.project-actions {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+}
+
+.project-action {
+  display: inline-flex;
+  min-width: 0;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border: 1px solid transparent;
+  border-radius: 0.7rem;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
   cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.project-action svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  transition: transform 180ms ease;
+}
+
+.project-action--primary {
+  flex: 1 1 auto;
+  background: #0f766e;
+  color: white;
+  box-shadow: 0 3px 8px rgb(15 118 110 / 20%);
+}
+
+.project-action--primary:hover {
+  background: #115e59;
+  box-shadow: 0 6px 14px rgb(15 118 110 / 28%);
+}
+
+.project-action--secondary {
+  flex: 0 0 auto;
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+}
+
+.project-action--secondary:hover {
+  border-color: #94a3b8;
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.project-action:hover {
+  transform: translateY(-1px);
+}
+
+.project-action:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.project-action--primary:hover svg {
+  transform: translateX(2px);
+}
+
+.project-action--secondary:hover svg {
+  transform: translate(1px, -1px);
+}
+
+.project-action:focus-visible {
+  outline: 3px solid #06b6d4;
+  outline-offset: 3px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-project,
+  .project-image img,
+  .project-action,
+  .project-action svg {
+    transition: none;
+  }
+
+  .card-project:hover,
+  .project-action:hover,
+  .project-action:active {
+    transform: none;
+  }
 }
 
 @media only screen and (width < 900px) {

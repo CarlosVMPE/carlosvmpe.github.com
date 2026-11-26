@@ -24,23 +24,23 @@ export const WORKS_MOCK = [
       {
         title: 'Frontend',
         items: [
-          'Desarrollo de funcionalidades para Checkout, Account, Cart, List y Services.',
-          'Uso de Angular 22, Signals, Signal Forms y rxResource.'
+          'Desarrollé funcionalidades para Checkout, Account, Cart, List y Services.',
+          'Utilicé Angular 22, Signals, Signal Forms y rxResource.'
         ]
       },
       {
         title: 'Backend y arquitectura',
         items: [
-          'Desarrollo de APIs REST con NestJS y Clean Architecture.',
-          'Uso de DTOs, class-validator, JWT, Passport, PostgreSQL y TypeORM.'
+          'Desarrollé APIs REST con NestJS y Clean Architecture.',
+          'Utilicé DTOs, class-validator, JWT, Passport, PostgreSQL y TypeORM.'
         ]
       },
       {
         title: 'Calidad y entrega',
         items: [
-          'Pruebas con Vitest y Playwright; análisis de calidad con SonarQube.',
-          'Uso de Docker y GitHub Actions para el flujo de desarrollo y despliegue en AWS.',
-          'Uso de herramientas de IA como CODA, Stepwise y Glob.AI.'
+          'Implementé pruebas con Vitest y Playwright, y analicé la calidad del código con SonarQube.',
+          'Utilicé Docker y GitHub Actions en el flujo de desarrollo y despliegue en AWS.',
+          'Integré herramientas de IA como CODA, Stepwise y Glob.AI en mi flujo de desarrollo.'
         ]
       }
     ],
@@ -533,23 +533,23 @@ export const WORKS_EN_TRANSLATIONS: Record<WorkId, WorkTranslation> = {
       {
         title: 'Frontend',
         items: [
-          'Developed features for Checkout, Account, Cart, List, and Services.',
-          'Used Angular 22, Signals, Signal Forms, and rxResource.'
+          'I developed features for Checkout, Account, Cart, List, and Services.',
+          'I used Angular 22, Signals, Signal Forms, and rxResource.'
         ]
       },
       {
         title: 'Backend and Architecture',
         items: [
-          'Developed REST APIs with NestJS and Clean Architecture.',
-          'Used DTOs, class-validator, JWT, Passport, PostgreSQL, and TypeORM.'
+          'I developed REST APIs with NestJS and Clean Architecture.',
+          'I used DTOs, class-validator, JWT, Passport, PostgreSQL, and TypeORM.'
         ]
       },
       {
         title: 'Quality and Delivery',
         items: [
-          'Used Vitest and Playwright for testing, and SonarQube for code quality analysis.',
-          'Used Docker and GitHub Actions in the development and AWS deployment workflow.',
-          'Used AI tools including CODA, Stepwise, and Glob.AI.'
+          'I implemented tests with Vitest and Playwright, and analyzed code quality with SonarQube.',
+          'I used Docker and GitHub Actions in the development and AWS deployment workflow.',
+          'I integrated AI tools such as CODA, Stepwise, and Glob.AI into my development workflow.'
         ]
       }
     ],

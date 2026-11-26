@@ -1,6 +1,6 @@
 <section id="skills" class="skills">
   <section class="tech-skills">
-    <h1 class="flex gap-2" [ngClass]="language.current() == 'en' ? 'flex-col-reverse sm:flex-row-reverse justify-end' : ''">
+    <h1 class="flex gap-2 flex-col sm:flex-row" [ngClass]="language.current() == 'en' ? 'flex-col-reverse sm:flex-row-reverse justify-end' : ''">
       <span>{{ language.t('skills.titleLead') }}</span>
       <span class="primary-color">{{ language.t('skills.technical') }}</span>
     </h1>

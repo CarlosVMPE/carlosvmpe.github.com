@@ -1,0 +1,17 @@
+export const workIds = [
+  'dsg',
+  'jm-family',
+  'supervielle',
+  'yape',
+  'movistar',
+  'valquiria',
+  'taxi-lima',
+  'kapital-taxi',
+  'excel-travel',
+  'online-taxi',
+  'taxi-pacifico',
+  'amigo-vip',
+  'tis-company',
+  'tarjeta-navidad',
+  'triptico-publicitario',
+] as const;

@@ -163,6 +163,22 @@ export class CustomCarousel<T> implements AfterViewInit, OnChanges, OnDestroy {
     return renderedIndex < this.cloneCount || renderedIndex >= this.cloneCount + this.totalItems;
   }
 
+  /**
+   * Only clones outside the visible window are hidden from interaction.
+   * A clone can become the visible copy during loop navigation and must
+   * remain clickable (for example, project detail links in the home carousel).
+   */
+  isInactiveClone(renderedIndex: number): boolean {
+    if (!this.isClone(renderedIndex)) {
+      return false;
+    }
+
+    const visibleStart = this.currentIndex();
+    const visibleEnd = visibleStart + this.currentVisibleItems;
+
+    return renderedIndex < visibleStart || renderedIndex >= visibleEnd;
+  }
+
 
   // =====================================================
   // INDEX
@@ -485,7 +501,19 @@ export class CustomCarousel<T> implements AfterViewInit, OnChanges, OnDestroy {
   // TRANSITION END
   // =====================================================
 
-  onTransitionEnd(): void {
+  onTransitionEnd(event?: TransitionEvent): void {
+
+    // Child cards also animate their own transforms. Ignore their bubbled
+    // transitionend events so they cannot trigger an early loop reset.
+    if (
+      event &&
+      (
+        event.target !== event.currentTarget ||
+        event.propertyName !== 'transform'
+      )
+    ) {
+      return;
+    }
 
     if (!this.loop()) {
       return;
