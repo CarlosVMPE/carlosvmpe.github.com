@@ -71,6 +71,8 @@
   gap: 0.65rem;
   padding: 0.8rem;
   border-top: 3px solid transparent;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
   border-image: linear-gradient(to left, oklch(59.6% 0.145 163.225), oklch(67.3% 0.182 276.935)) 1;
 }
 
@@ -163,6 +165,22 @@
   outline-offset: 3px;
   position: relative;
   z-index: 1;
+}
+
+/* Four cards are still visible from 1024px, leaving too little room for
+   both labels side by side. Stack the actions so neither button gets clipped. */
+@media (min-width: 1024px) and (max-width: 1365px) {
+  .project-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.4rem;
+  }
+
+  .project-action {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 40px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
